@@ -1,6 +1,38 @@
-.wrapper {
+.wrapper {    
     min-height: 100vh;
-    padding: 50px;    
+    padding: 100px 50px 50px;    
     font-size: 30px; 
     box-sizing: border-box;
+}
+
+.main-slide {
+   
+    .swiper-slide {
+        min-height: 100vh;
+        background-size: cover;
+        font-size: 100px;
+        line-height: 200px;
+        &.slide-item1 {
+            background-image: url('https://cdn.newspenguin.com/news/photo/202006/1920_5382_140.jpg');
+        }
+        &.slide-item2 {
+            background-image: url('https://korean.miceseoul.com/humanframe/theme/mice/assets/images/spot/img_spot_view29.jpg');
+        }
+        &.slide-item3 {
+            background-image: url('https://image.chosun.com/sitedata/image/201407/09/2014070902197_0.jpg');
+        }
+    }
+
+    .swiper-pagination {
+        .swiper-pagination-bullet {
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            opacity: 0.5; 
+        }
+        .swiper-pagination-bullet-active
+        {
+            opacity: 1
+        }
+    }
 }

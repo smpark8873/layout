@@ -4,11 +4,16 @@ import styled from 'styled-components';
 
 
 const HeaderWrap = styled.div`
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
     min-height: 100px;
     background-color: #333; 
     color: #fff;    
     padding: 30px;
     box-sizing: border-box;
+    z-index: 100;
     h1 {
         position: absolute;
         top: 30px;
@@ -46,11 +51,6 @@ const Nav = styled.div`
         }
     }
 `;
-
-function handleClick(e) {
-    
-}
-
 
 function Header(props) {
     return (
