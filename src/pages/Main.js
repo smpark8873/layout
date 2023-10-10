@@ -5,10 +5,10 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { EffectFade } from 'swiper/modules';
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
+import 'swiper/scss/scrollbar';
 
 const MainWrapper = styled.div`
 	
