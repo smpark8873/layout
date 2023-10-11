@@ -1,46 +1,36 @@
+// You can live edit this code below the import statements
 import React from 'react';
-import styled from 'styled-components';
-import { keyframes } from "@emotion/react";
-import { Reveal } from "react-awesome-reveal";
+import { Zoom, Fade, Flip, Reveal   } from 'react-reveal';
 
-const customAnimation = keyframes`
-  from {
-    opacity: 0;
-    transform: translate3d(-200px, -100px, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-`;
-
-// function CustomAnimation({ children }) {
-//     return <Reveal keyframes={customAnimation}>{children}</Reveal>;
-// }
-
-
-const AnimationWrap = styled.div`
-    padding: 150px 50px 50px;
-    text-align: center;
-
-    & > div { 
-        p {
-            line-height: 70px;
-            font-size: 50px;
-        }
-    }
-`;
-
-const Animation = (children) => {
+function Animaiton() {
     return (
-        <div className='wrapper'>
-            <AnimationWrap>
-                {/* <Fade direction="left"><p>fade fade</p></Fade> */}
-                <Reveal keyframes={customAnimation}>{children}</Reveal>
-            </AnimationWrap>            
+        <div className="warp">
+            <Zoom duration={1000}>
+                <div>
+                    <div>First Child</div>
+                    <div>Second Child</div>
+                </div>
+            </Zoom>
+            <Fade left  delay={1000}>
+                <h1  style={{marginTop: '100px'}}>
+                   <p> Your content goes here</p>
+                </h1>
+            </Fade>
+            <Flip>
+                <h1>
+                    Your content goes here
+                </h1>
+            </Flip>
+            <Reveal effect="fadeInUp">
+  <p>Markup that will be revealed on scroll</p>
+</Reveal>
+<Reveal effect="fadeInUp" effectOut="fadeOutLeft">
+  <p>Markup that will be revealed on scroll</p>
+</Reveal>
+
         </div>
-    );
-};
-  
-export default Animation;
+    );  
+}
+
+export default Animaiton;
+ 
