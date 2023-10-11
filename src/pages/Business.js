@@ -17,8 +17,11 @@ const AnimationWrap = styled.div`
 
 const Business = () => {
     return (
-        <div className='wrapper'>
+        <div className='wrapper'>            
             <AnimationWrap>
+            <p style={{margin: '30px 0', fontSize: '30px', color: 'blue'}}>
+                참고사이트 : <a href="https://react-awesome-reveal.morello.dev/docs/getting-started" target='_blank'>https://react-awesome-reveal.morello.dev/docs/getting-started</a> 
+            </p>
                 <Fade direction='up'  cascade damping={0.5}> {/* direction : 애니메이션의 원점 변경. up, down, left, right */}
                     <p>Fade Up</p>
                     <p>Fade Up</p>

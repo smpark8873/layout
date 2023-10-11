@@ -26,9 +26,9 @@ const Main = (props) => {
 				autoplay={{ delay: 2000, disableOnInteraction: false }}
 				loop={true}
 				>
-				<SwiperSlide className='slide-item1'>Slide 1</SwiperSlide>
-				<SwiperSlide className='slide-item2'>Slide 2</SwiperSlide>
-				<SwiperSlide className='slide-item3'>Slide 3</SwiperSlide>				
+				<SwiperSlide className='slide-item1'></SwiperSlide>
+				<SwiperSlide className='slide-item2'></SwiperSlide>
+				<SwiperSlide className='slide-item3'></SwiperSlide>				
 			</Swiper>			
 		</MainWrapper>
 	);
