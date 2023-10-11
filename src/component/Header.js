@@ -60,6 +60,7 @@ function Header(props) {
                 <ul>
                     <li><NavLink to="/Intro">Intro</NavLink></li>
                     <li><NavLink to="/Business">Business</NavLink></li>
+                    <li><NavLink to="/Animation">Animation</NavLink></li>
                 </ul>
             </Nav>
         </HeaderWrap>

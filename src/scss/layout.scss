@@ -1,6 +1,6 @@
 .wrapper {    
     min-height: 100vh;
-    padding: 100px 50px 50px;    
+    //padding: 100px 50px 50px;    
     font-size: 30px; 
     box-sizing: border-box;
 }
@@ -12,6 +12,10 @@
         background-size: cover;
         font-size: 100px;
         line-height: 200px;
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+    
         &.slide-item1 {
             background-image: url('https://cdn.newspenguin.com/news/photo/202006/1920_5382_140.jpg');
         }
@@ -39,4 +43,50 @@
     .swiper-button-next {
         color: #fff;
     }
+}
+
+.mySwiper {
+    // width: 100%; 
+    // height: 100%;
+    .swiper-wrapper {
+        
+    }
+    .swiper-slide {
+        position: relative;
+        padding-top: 56.25%;        
+        & > div { 
+            position: absolute;
+            top: 0;
+            left: 0;            
+            // width: 100% !important; 
+            // height: 100vh !important;
+        }
+    }
+    
+}
+
+
+.player-wrapper {
+    position: relative;
+    padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+
+    box-sizing: border-box;
+}
+
+.react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.con-area {
+    height: 500px;
+    background-color: pink;
+}
+
+.txt {
+    padding: 50px 0;
+    text-align: center;
+
 }
