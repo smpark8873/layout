@@ -69,9 +69,6 @@ const ContentWrap = styled.div`
 			}
 		}
 	}
-	
-
-
 `;
 
 const Main = (props) => {
