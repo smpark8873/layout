@@ -38,7 +38,7 @@ const Nav = styled.div`
         li { 
             a{
                 display: block;
-                padding: 0 50px;
+                padding: 0 40px;
                 color: #fff;
                 line-height: 40px; 
                 font-size: 22px;
@@ -62,6 +62,8 @@ function Header(props) {
                     <li><NavLink to="/Business">Animation1</NavLink></li>
                     <li><NavLink to="/Animation">Animation2</NavLink></li>
                     <li><NavLink to="/ScrollAnimation">ScrollAnimation</NavLink></li>
+                    <li><NavLink to="/Layout">Layout</NavLink></li>
+                    <li><NavLink to="/Accordion">Accordion</NavLink></li>
                 </ul>
             </Nav>
         </HeaderWrap>

@@ -1,0 +1,34 @@
+const Accordion = () => {
+    const MENU_LIST = [
+        { title: 'TAMS', list: ['User','Wallets'] },
+        { title : 'Jupiter', list : ['Create', 'Read', 'Update', 'Delete'] },
+    ];
+
+    const [activeIndex, setActiveIndex] = useState();
+
+    return(
+        <Nav>
+            <TitleWrapper>
+                <Title>DigiFinace</Title>
+            </TitleWrapper>
+            <UL>
+                {MENU_LIST.map((item,idx) => {
+                    const active = idx === activeIndex ? 'active' : '';
+
+                    return(
+                        <ListItem
+                            title={item.title}
+                            idx={idx}
+                            list={item.list}
+                            active={active}
+                            activeIndex={activeIndex}
+                            setActiveIndex={setActiveIndex}
+                        /> 
+                    );
+                })}
+            </UL>
+        </Nav>
+    );
+}
+
+export default Accordion;
