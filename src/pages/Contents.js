@@ -14,8 +14,6 @@ const ContentWrap = styled.div`
     }
 `
 
-
-
 const Contents = () => {
     const [number, setNumber] = useState(0); 
 
