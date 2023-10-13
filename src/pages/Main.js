@@ -22,18 +22,31 @@ const ContentWrap = styled.div`
 		padding: 30px 0; 
 		h2 {
 			margin: 0;
-			line-height: 32px;
-			font-size: 30px;		
+			line-height: 34px;
+			font-size: 32px;		
 		}
 		h3 {
 			margin: 30px 0 10px;
 			line-height: 26px; 
-			font-size: 20px;
+			font-size: 22px;
 		}
 		h4 {
 			margin: 20px 0 10px;
 			line-height: 20px;
 			font-size: 18px;
+			color: #000;
+		}
+		.tbl { 
+			border-collapse : collapse;
+			th {
+				padding: 10px 20px;
+				border: 1px solid #ddd;
+				background-color: #f8f8f8;
+			}
+			td {
+				padding: 10px 20px;
+				border: 1px solid #ddd;
+			}
 		}
 		.content {
 			padding-left: 10px;
@@ -260,9 +273,27 @@ const Main = (props) => {
 
 					<h3>루트 구성 요소 파일</h3>
 					<div className='content'>
-
+						<p className='dot'>App.js 파일 안에 function Profile(){}과 export default function Gallery() {} 작성, 하지만 설정에 따라 루트 구성 요소가 다른 파일에 있을 수 도 있음. </p>
+						<p className='dot'>Next.js와 같은 파일 기반 라우팅이 포함된 프레임워크를 사용하는 경우 루트 구성 요소는 페이지마다 다름</p>
 					</div>
+
+					<h3>구성요소 내보내기 및 가져오기</h3>
+					<table className='tbl'>
+						<tr>
+							<th>직접 가져오기</th>
+							<td>import Gallery from './Gallery.js';</td>
+							<td>export defaunt function Gallery () {};</td>
+						</tr>
+						<tr>
+							<th>명명된 가져오기</th>
+							<td>import $#123; Profile &#125; from './Gallery.js'; </td>
+							<td> export function Profile() {}</td>
+						</tr>
+					</table>
 				</div>
+				<div className='section'>
+					<h2></h2>
+				</div>				
 			</ContentWrap>
 		</div>
 	);
