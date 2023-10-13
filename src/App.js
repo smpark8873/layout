@@ -8,6 +8,7 @@ import Animation from './pages/Animation';
 import ScrollAnimation from './pages/ScrollAnimation';
 import Layout from './pages/Layout';
 import Accordion from './pages/Accordion';
+import Ui from './pages/Ui';
 // import Product from './pages/Product';
 import NotFound from './pages/NotFound';
 import './scss/common.scss';
@@ -25,6 +26,7 @@ const App = () => {
               <Route path="/ScrollAnimation" element={<ScrollAnimation />}></Route>
               <Route path="/Layout" element={<Layout />}></Route>
               <Route path="/Accordion" element={<Accordion />}></Route>
+              <Route path="/Ui" element={<Ui />}></Route>
               {/* <Route path="/product/:productId" element={<Product />}></Route> */}
               {/* 엘리먼트의 상단에 위치하는 라우트들의 규칙을 모두 확인하고, 일치하는 라우트가 없다면 이 라우트가 화면에 나타나게 됩니다. */}
               <Route path="*" element={<NotFound />}></Route>

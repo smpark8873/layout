@@ -30,6 +30,11 @@ const ContentWrap = styled.div`
 			line-height: 26px; 
 			font-size: 20px;
 		}
+		h4 {
+			margin: 20px 0 10px;
+			line-height: 20px;
+			font-size: 18px;
+		}
 		.content {
 			padding-left: 10px;
 			color: #555;
@@ -53,7 +58,9 @@ const ContentWrap = styled.div`
 			.red {
 				color: red;
 			}
-
+			.bold {
+				font-weight: bold;
+			}
 			button {
 				padding: 0 20px;
 				height: 30px;
@@ -201,6 +208,59 @@ const Main = (props) => {
 					<div className='content'>
 						<MyButton count={count} onClick={handleClick} />
      					<MyButton count={count} onClick={handleClick} />
+					</div>
+				</div>
+				<div className='section'>
+					<h2>UI 설명</h2>					
+					<p>컴포넌트는 React 핵심 개념 중 하나! 사용자 인터페이스를 구축하는 기반</p>
+					
+					<h3>구성 요소: UI빌링 블록</h3>
+					<div className='content'>
+						<p className='dot'>React를 사용하면 마크업, CSS 및 JavaScript를 <strong>앱의 재사용 가능한 UI 요소인 사용자 정의 "구성 요소"로 결합</strong>할 수 있습니다.</p>
+						<p className='dot'>HTML 태그와 마찬가지로 구성 요소를 구성, 정렬 및 중첩하여 전체 페이지를 디자인할 수 있습니다. </p>
+						<p className='dot'>이미 작성한 구성 요소를 재사용하여 많은 디자인을 구성하여 개발 속도를 높일 수 있다</p>
+					</div>
+
+					<h3>구성 요소 정의</h3>
+					<div className="content">
+						<p className='dot'>React는 동일한 기술을 사용하면서도 상호작용을 최우선으로 생각합니다.</p>
+						<p className='dot'><strong> React 구성요소는 마크업을 뿌릴 수 있는 JavaScript 함수입니다 .</strong></p>
+
+						<h4>1단계 : 구성요소 내보내기</h4>
+						<p className='dot'>접두사 는 표준 JavaScript 구문<em className='red'>export default</em></p>
+						<p className='dot'>나중에 다른 파일에서 가져올 수 있도록 파일의 주요 기능을 표시할 수 있습니다.</p>
+
+						<h4>2단계 : 함수 정의</h4>
+						<p className='dot'><em className="red">function Profile() {}</em>로 JavaScript함수를 정의</p>
+						<p className='dot bold'>React 구성 요소는 일반 JavaScript 함수이지만 이름은 대문자로 시작해야 하며 그렇지 않으면 작동하지 않습니다!</p>
+
+						<h4>3단계 : 마크업 추가</h4>
+						<p className='dot'>구성요소는 태그를 반환합니다. HTML처럼 작성되지만 실제로 내부적으로는 JavaScript입니다. 이 구문을 <strong className='red'>JSX</strong>라고 합니다.</p>
+						<p className='dot'>반환문(return)은 한줄에 모두 작성할 수도 있다.</p>
+						<p className='dot bold'>여러줄 일 경우 반드시 한쌍의 괄호로 묶어야 한다. <span className='red'>괄호가 없으면 다음 줄의 모든 코드는 return 무시됩니다 !</span></p>
+					</div>
+
+					<h3>구성 요소 사용</h3>
+					<div className='content'>
+						<p>구성요소를 정의했으므로 Profile이를 다른 구성요소 내에 중첩할 수 있습니다.<br /> 예를 들어 여러 구성 요소를 사용하는 구성 요소를 내보낼 수 있습니다 </p>
+
+						<h4>브라우저가 보는 것</h4>
+						<strong>대소문자 차이점 확인</strong>
+						<p className='dot'>소문자 : html 태그를 참조</p>
+						<p className='dot'>대문자로 시작 : 구성요소를 사용</p>
+
+						<h4>구성요소 중첩 및 구성</h4>
+						<p className='dot'>컴포넌트를 한 번 정의하면 원하는 만큼 여러 장소에서 사용할 수 있습니다.</p>
+						<p className='dot'>구성 요소는 다른 구성 요소를 렌더링할 수 있지만 정의를 중첩해서는 안됩니다.</p>
+						<p className='dot'>최상위 수준에서 모든 구성요소를 정의</p>
+					</div>
+				</div>
+				<div className='section'>
+					<h2>구성요소 가져오기 및 내보내기</h2>
+
+					<h3>루트 구성 요소 파일</h3>
+					<div className='content'>
+
 					</div>
 				</div>
 			</ContentWrap>

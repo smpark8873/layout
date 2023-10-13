@@ -16,7 +16,7 @@ const HeaderWrap = styled.div`
     z-index: 100;
     h1 {
         position: absolute;
-        top: 30px;
+        top: 20px;
         left: 50px;
         margin: 0;         
         font-size: 40px;
@@ -64,6 +64,7 @@ function Header(props) {
                     <li><NavLink to="/ScrollAnimation">ScrollAnimation</NavLink></li>
                     <li><NavLink to="/Layout">Layout</NavLink></li>
                     <li><NavLink to="/Accordion">Accordion</NavLink></li>
+                    <li><NavLink to="/Ui">Ui</NavLink></li>
                 </ul>
             </Nav>
         </HeaderWrap>
