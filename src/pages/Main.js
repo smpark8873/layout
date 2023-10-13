@@ -294,7 +294,7 @@ const Main = (props) => {
 				</div>
 				<div className='section'>
 					<h2>JSX</h2>					
-					<p className='dot'>JSX는 JavaScript 파일 내에 HTML과 유사한 마크업을 작성할 수 있게 해주는 스크립트용 구문 확장 </p>
+					<p className='dot'>JSX는 JavaScript 파일 내에 HTML과 유사한 마크업을 작성할 수 있게 해주는 <strong>자바스크립트 확장 문법</strong>!!! </p>
 
 					<h3>JSX: JavaScript에 마크업 넣기</h3>
 					<div className='content'>
@@ -315,7 +315,7 @@ const Main = (props) => {
 							&lt;div&gt;마크업에 추가 항목을 추가하고 싶지 않은 경우 대신 다음 <></>을 작성할 수 있습니다<br />
 							빈 태그를 <em>조각</em>이라고 합니다. 프래그먼트를 사용하면 브라우저 HTML 트리에 흔적을 남기지 않고 항목을 그룹화할 수 있습니다.
 						</p>
-
+						
 						<h4>2. 모든 태그를 닫아야함</h4>
 						<p className='dot'>JSX에서는 태그를 명시적으로 닫아야 합니다. 자체 닫는 태그인 &lt;img /&gt;와 래핑 태그인 처럼 작성</p>
 
@@ -358,7 +358,9 @@ const Main = (props) => {
 				</div>
 				<div className='section'>
 					<h2>Props를 Component에 전달하기</h2>
-					
+					<p>props(properties)는 컴포넌트 속성을 설정할때 사용</p>
+					<p>props 값은 해당 컴포넌트를 불러와 사용하는 부모 컴포넌트에서만 설정 가능</p>
+					<p>props를 통해 객체, 배열 및 삼수를 포함한 모든 JavaScript값을 전달 가능</p>
 				</div>		
 			</ContentWrap>
 		</div>
