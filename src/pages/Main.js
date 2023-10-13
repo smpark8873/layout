@@ -52,22 +52,7 @@ const ContentWrap = styled.div`
 			padding-left: 10px;
 			color: #555;
 			line-height: 24px;
-			font-size: 16px; 
-			.dot {
-				position: relative; 
-				padding-left: 10px;
-				&::before {
-					display: inline-block;
-					content:'';
-					position: absolute;
-					top: 10px;
-					left: 0;
-					width: 4px;
-					height: 4px;
-					border-radius: 50%;
-					background-color: #999;					
-				}
-			}
+			font-size: 16px; 			
 			.red {
 				color: red;
 			}
@@ -86,6 +71,21 @@ const ContentWrap = styled.div`
 			}
 			li {
 				margin-top: 10px;
+			}
+		}
+		.dot {
+			position: relative; 
+			padding-left: 10px;
+			&::before {
+				display: inline-block;
+				content:'';
+				position: absolute;
+				top: 10px;
+				left: 0;
+				width: 4px;
+				height: 4px;
+				border-radius: 50%;
+				background-color: #999;					
 			}
 		}
 	}
@@ -115,6 +115,7 @@ const Main = (props) => {
 		setCount(count + 1);
 	}	
 
+	const name = 'Gregorio Y. Zara';
 	return (
 		<div>
 			<MainWrapper>
@@ -227,19 +228,19 @@ const Main = (props) => {
 					<h2>UI 설명</h2>					
 					<p>컴포넌트는 React 핵심 개념 중 하나! 사용자 인터페이스를 구축하는 기반</p>
 					
-					<h3>구성 요소: UI빌링 블록</h3>
+					<h3>Component: UI빌링 블록</h3>
 					<div className='content'>
 						<p className='dot'>React를 사용하면 마크업, CSS 및 JavaScript를 <strong>앱의 재사용 가능한 UI 요소인 사용자 정의 "구성 요소"로 결합</strong>할 수 있습니다.</p>
 						<p className='dot'>HTML 태그와 마찬가지로 구성 요소를 구성, 정렬 및 중첩하여 전체 페이지를 디자인할 수 있습니다. </p>
 						<p className='dot'>이미 작성한 구성 요소를 재사용하여 많은 디자인을 구성하여 개발 속도를 높일 수 있다</p>
 					</div>
 
-					<h3>구성 요소 정의</h3>
+					<h3>Component 정의</h3>
 					<div className="content">
 						<p className='dot'>React는 동일한 기술을 사용하면서도 상호작용을 최우선으로 생각합니다.</p>
 						<p className='dot'><strong> React 구성요소는 마크업을 뿌릴 수 있는 JavaScript 함수입니다 .</strong></p>
 
-						<h4>1단계 : 구성요소 내보내기</h4>
+						<h4>1단계 : 컴포넌트 내보내기</h4>
 						<p className='dot'>접두사 는 표준 JavaScript 구문<em className='red'>export default</em></p>
 						<p className='dot'>나중에 다른 파일에서 가져올 수 있도록 파일의 주요 기능을 표시할 수 있습니다.</p>
 
@@ -248,36 +249,36 @@ const Main = (props) => {
 						<p className='dot bold'>React 구성 요소는 일반 JavaScript 함수이지만 이름은 대문자로 시작해야 하며 그렇지 않으면 작동하지 않습니다!</p>
 
 						<h4>3단계 : 마크업 추가</h4>
-						<p className='dot'>구성요소는 태그를 반환합니다. HTML처럼 작성되지만 실제로 내부적으로는 JavaScript입니다. 이 구문을 <strong className='red'>JSX</strong>라고 합니다.</p>
+						<p className='dot'>컴포넌트는 태그를 반환합니다. HTML처럼 작성되지만 실제로 내부적으로는 JavaScript입니다. 이 구문을 <strong className='red'>JSX</strong>라고 합니다.</p>
 						<p className='dot'>반환문(return)은 한줄에 모두 작성할 수도 있다.</p>
 						<p className='dot bold'>여러줄 일 경우 반드시 한쌍의 괄호로 묶어야 한다. <span className='red'>괄호가 없으면 다음 줄의 모든 코드는 return 무시됩니다 !</span></p>
 					</div>
 
-					<h3>구성 요소 사용</h3>
+					<h3>Component 사용</h3>
 					<div className='content'>
-						<p>구성요소를 정의했으므로 Profile이를 다른 구성요소 내에 중첩할 수 있습니다.<br /> 예를 들어 여러 구성 요소를 사용하는 구성 요소를 내보낼 수 있습니다 </p>
+						<p>Component를 정의했으므로 Profile이를 다른 Component 내에 중첩할 수 있습니다.<br /> 예를 들어 여러 Component를 사용하는 Component를 내보낼 수 있습니다 </p>
 
 						<h4>브라우저가 보는 것</h4>
 						<strong>대소문자 차이점 확인</strong>
 						<p className='dot'>소문자 : html 태그를 참조</p>
-						<p className='dot'>대문자로 시작 : 구성요소를 사용</p>
+						<p className='dot'>대문자로 시작 : Component를 사용</p>
 
-						<h4>구성요소 중첩 및 구성</h4>
+						<h4>Component 중첩 및 구성</h4>
 						<p className='dot'>컴포넌트를 한 번 정의하면 원하는 만큼 여러 장소에서 사용할 수 있습니다.</p>
-						<p className='dot'>구성 요소는 다른 구성 요소를 렌더링할 수 있지만 정의를 중첩해서는 안됩니다.</p>
-						<p className='dot'>최상위 수준에서 모든 구성요소를 정의</p>
+						<p className='dot'>컴포넌트는 다른 컴포넌트를 렌더링할 수 있지만 정의를 중첩해서는 안됩니다.</p>
+						<p className='dot'>최상위 수준에서 모든 컴포넌트를 정의</p>
 					</div>
 				</div>
 				<div className='section'>
-					<h2>구성요소 가져오기 및 내보내기</h2>
+					<h2>Component 가져오기 및 내보내기</h2>
 
-					<h3>루트 구성 요소 파일</h3>
+					<h3>root Component 파일</h3>
 					<div className='content'>
 						<p className='dot'>App.js 파일 안에 function Profile(){}과 export default function Gallery() {} 작성, 하지만 설정에 따라 루트 구성 요소가 다른 파일에 있을 수 도 있음. </p>
 						<p className='dot'>Next.js와 같은 파일 기반 라우팅이 포함된 프레임워크를 사용하는 경우 루트 구성 요소는 페이지마다 다름</p>
 					</div>
 
-					<h3>구성요소 내보내기 및 가져오기</h3>
+					<h3>Component 내보내기 및 가져오기</h3>
 					<table className='tbl'>
 						<tr>
 							<th>직접 가져오기</th>
@@ -292,8 +293,73 @@ const Main = (props) => {
 					</table>
 				</div>
 				<div className='section'>
-					<h2></h2>
-				</div>				
+					<h2>JSX</h2>					
+					<p className='dot'>JSX는 JavaScript 파일 내에 HTML과 유사한 마크업을 작성할 수 있게 해주는 스크립트용 구문 확장 </p>
+
+					<h3>JSX: JavaScript에 마크업 넣기</h3>
+					<div className='content'>
+						<p className='dot'> React에서 렌더링 로직과 마크업이 같은 장소, 즉 구성 요소에 함께 존재하는 이유</p>
+						<p className='dot'>JSX와 React는 서로 다른 두 가지입니다. 함께 사용되는 경우가 많지만, 서로 독립적으로 사용할 수도 있습니다 . <br /> JSX는 구문 확장이고 React는 JavaScript 라이브러리입니다.</p>
+					</div>
+
+					<h3>HTML을 JSX로 변환</h3>
+					<div className='content'>
+						<p className='dot'>JSX가 HTML보다 더 엄격하고 몇 가지 더 많은 규칙을 가지고 있음!!</p>
+					</div>
+
+					<h3>JSX 규칙</h3>
+					<div className='content'>
+						<h4>1. 단일 루트 요소를 반환</h4>
+						<p className='dot'>구성 요소에서 여러 요소를 반환하려면 단일 상위 태그로 요소를 래핑하세요.</p>
+						<p className='dot'>
+							&lt;div&gt;마크업에 추가 항목을 추가하고 싶지 않은 경우 대신 다음 <></>을 작성할 수 있습니다<br />
+							빈 태그를 <em>조각</em>이라고 합니다. 프래그먼트를 사용하면 브라우저 HTML 트리에 흔적을 남기지 않고 항목을 그룹화할 수 있습니다.
+						</p>
+
+						<h4>2. 모든 태그를 닫아야함</h4>
+						<p className='dot'>JSX에서는 태그를 명시적으로 닫아야 합니다. 자체 닫는 태그인 &lt;img /&gt;와 래핑 태그인 처럼 작성</p>
+
+						<h4>3. CamelCase의 모든것</h4>
+						<p className='dot'>속성,변수이름에는 대시를 포함하거나 예약어를 사용 할 수 없음</p>
+						<p className='dot'>역사적인 이유로 속성 aria-*은 data-*대시를 사용하여 HTML로 작성됩니다.</p>
+
+						<h4>전문가팁 : JSX 변환기 사용</h4>
+						<p className='dot'>오류 메시지는 마크업 수정에 대한 올바른 방향을 알려주는 경우가 많습니다.</p>
+					</div>
+				</div>
+				<div className='section'>
+					<h2>중괄호가 있는 JSX의 JavaScript</h2>
+					<p className='dot'>중괄호를 사용하면 JavaScript 논리와 변수를 마크업으로 가져올 수 있습니다.</p>
+
+					<h3>따옴표로 문자열 전달하기</h3>
+					<div className='content'>
+						<p className='dot'>문자열 속성을 JSX에 전달하려면 작은따옴표나 큰따옴표로 묶어야 합니다.</p>
+						<p className='dot'> src나 alt를 동적으로 지정하려면 <strong>"and"나 &#123;and&#125;사용</strong></p>
+					</div>
+
+					<h3>중괄호 사용: JavaScript 세계로 통하는 창</h3>
+					<div className='content'>
+						<p className='dot'>중괄호를 사용하여 내부에서 JavaScript를 사용할 수 있음</p>
+						<p className='dot'>{name}'s To Do List</p>
+						<p className='dot'>함수 호출을 포함하여 모든 JavaScript 표현식은 중괄호 사이에서 작동</p>
+						<h4>중괄호를 사용하는 위치</h4>
+						<ul>
+							<li>1. JSX 태그 내부 텍스트</li>
+							<li>2. 속성 값  ex) src=&#123;target&#125;</li>
+						</ul>
+					</div>
+
+					<h3>이중컬리 사용 : JSX의 css 및 기타 객체</h3>
+					<div className='content'>
+						<p className='dot'>JSX에서 JS 객체를 전달하려면 객체를 또 다른 중괄호 쌍( )으로 묶어야 합니다 person=&#123;&#123; name: "Hedy Lamarr", inventions: 5 &#125;&#125;.</p>
+						<p className='dot'>JSX의 인라인 CSS 스타일에서 이를 볼 수 있습니다. </p>
+						<p className='dot bold red'>인라인 style속성은 camelCase로 작성됩니다. </p>
+					</div>	
+				</div>
+				<div className='section'>
+					<h2>Props를 Component에 전달하기</h2>
+					
+				</div>		
 			</ContentWrap>
 		</div>
 	);
