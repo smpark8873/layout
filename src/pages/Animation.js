@@ -4,7 +4,7 @@ import { Zoom, Fade, Flip, Reveal   } from 'react-reveal';
 
 function Animaiton() {
     return (
-        <div className="warp">
+        <div className="wrap">
             <p style={{margin: '30px 0', fontSize: '30px', color: 'blue'}}>참고사이트 : <a href="https://www.react-reveal.com/" target='_blank'>https://www.react-reveal.com/</a> </p>
             <Zoom duration={1000}>
                 <div>

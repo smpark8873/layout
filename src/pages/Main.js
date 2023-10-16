@@ -361,7 +361,14 @@ const Main = (props) => {
 					<p>props(properties)는 컴포넌트 속성을 설정할때 사용</p>
 					<p>props 값은 해당 컴포넌트를 불러와 사용하는 부모 컴포넌트에서만 설정 가능</p>
 					<p>props를 통해 객체, 배열 및 삼수를 포함한 모든 JavaScript값을 전달 가능</p>
-				</div>		
+				</div>
+				<div className='section'>
+					<h2>조건부 렌더링</h2>
+					<p>if명령문, &&연산자, 삼항연산자( ? : )</p>
+					
+					<h3>조건부로 JSX반환</h3>
+					<div className="content"></div>
+				</div>	
 			</ContentWrap>
 		</div>
 	);

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import styled from "styled-components";
 
-const ContentWrap = styled.div`
-    padding: 150px 50px 50px;
+const ContentWrap = styled.div`    
     min-height: 1000px;
     .btn {
         width: 100px;
