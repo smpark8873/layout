@@ -1,9 +1,73 @@
+// 챌린지 4/4 : _ _구분 기호가 있는 목록
+// 이 예는 Tachibana Hokushi의 유명한 하이쿠를 각 줄이 <p>태그로 묶인 상태로 렌더링합니다.
+//  당신의 임무는 각 단락 사이에 구분 기호를 삽입하는 것입니다 <hr />. 결과 구조는 다음과 같아야 합니다
+const poem = {
+  lines: [
+    'I write, erase, rewrite',
+    'Erase again, and then',
+    'A poppy blooms.'
+  ]
+};
+
+export default function Poem() {
+  return (
+    <article class="wrap">
+      {poem.lines.map((line, index) =>
+        <p key={index}>
+          {line}
+        </p>
+      )}
+    </article>
+  );
+}
+
+
+
+
 
 // 챌린지 3/4 : _ _목록 항목 구성 요소 추출
 // 이 RecipeList구성 요소에는 두 개의 중첩된 map호출이 포함되어 있습니다. 
 // 이를 단순화하려면 , 및 소품을 Recipe허용하는 구성 요소를 추출하십시오 . 외부를 어디에 배치하며 그 이유는 무엇입니까?idnameingredientskey
 
+// export const recipes = [{
+//   id: 'greek-salad',
+//   name: 'Greek Salad',
+//   ingredients: ['tomatoes', 'cucumber', 'onion', 'olives', 'feta']
+// }, {
+//   id: 'hawaiian-pizza',
+//   name: 'Hawaiian Pizza',
+//   ingredients: ['pizza crust', 'pizza sauce', 'mozzarella', 'ham', 'pineapple']
+// }, {
+//   id: 'hummus',
+//   name: 'Hummus',
+//   ingredients: ['chickpeas', 'olive oil', 'garlic cloves', 'lemon', 'tahini']
+// }];
 
+// function Recipe({ id, name, ingredients }) {
+//   return (
+//     <div>
+//       <h2>{name}</h2>
+//       <ul>
+//         {ingredients.map(ingredient =>
+//           <li key={ingredient}>
+//             {ingredient}
+//           </li>
+//         )}
+//       </ul>
+//     </div>
+//   );
+// }
+
+// export default function RecipeList() {
+//   return (
+//     <div className="wrap">
+//       <h1>Recipes</h1>
+//       {recipes.map(recipe =>
+//         <Recipe {...recipe} key={recipe.id} />
+//       )}
+//     </div>
+//   );
+// }
 
 
 
