@@ -1,53 +1,198 @@
 
-
-const people = [{
-  id: 0,
-  name: 'Creola Katherine Johnson',
-  profession: 'mathematician',
-}, {
-  id: 1,
-  name: 'Mario José Molina-Pasquel Henríquez',
-  profession: 'chemist',
-}, {
-  id: 2,
-  name: 'Mohammad Abdus Salam',
-  profession: 'physicist',
-}, {
-  name: 'Percy Lavon Julian',
-  profession: 'chemist',  
-}, {
-  name: 'Subrahmanyan Chandrasekhar',
-  profession: 'astrophysicist',
-}];
-
-export function getImageUrl(person) {
-  return (
-    'https://i.imgur.com/' +
-    person.imageId +
-    's.jpg'
-  );
-}
+// 챌린지 3/4 : _ _목록 항목 구성 요소 추출
+// 이 RecipeList구성 요소에는 두 개의 중첩된 map호출이 포함되어 있습니다. 
+// 이를 단순화하려면 , 및 소품을 Recipe허용하는 구성 요소를 추출하십시오 . 외부를 어디에 배치하며 그 이유는 무엇입니까?idnameingredientskey
 
 
-export default function List() {
-  const chemists = people.filter(person =>
-    person.profession === 'chemist'
-  );
-  const listItems = chemists.map(person =>
-    <li>
-      <img
-        src={getImageUrl(person)}
-        alt={person.name}
-      />
-      <p>
-        <b>{person.name}:</b>
-        {' ' + person.profession + ' '}
-        known for {person.accomplishment}
-      </p>
-    </li>
-  );
-  return <ul style={{padding: '150px 50px 50px'}}>{listItems}</ul>;
-}
+
+
+
+// 챌린지 2/4 : _ _하나의 구성요소에 중첩된 목록
+// 이 배열에서 레시피 목록을 만드세요! 배열의 각 레시피에 대해 이름을 an으로 표시 <h2>하고 해당 재료를 에 나열합니다 <ul>.
+
+
+// export default function RecipeList({}) {
+//   return (
+//     <div class="wrap">
+//       <h1>Recipes</h1>
+//       {recipes.map(recipe =>
+//         <div key={recipe.id}>
+//           <h2>{recipe.name}</h2>
+//           <ul>
+//             {recipe.ingredients.map(ingredient =>
+//               <li key={ingredient}>
+//                 {ingredient}
+//               </li>  
+//             )}
+//           </ul>
+//         </div>
+//       )}
+//     </div>
+//   );
+// }
+
+// export const recipes = [{
+//   id: 'greek-salad',
+//   name: 'Greek Salad',
+//   ingredients: ['tomatoes', 'cucumber', 'onion', 'olives', 'feta']
+// }, {
+//   id: 'hawaiian-pizza',
+//   name: 'Hawaiian Pizza',
+//   ingredients: ['pizza crust', 'pizza sauce', 'mozzarella', 'ham', 'pineapple']
+// }, {
+//   id: 'hummus',
+//   name: 'Hummus',
+//   ingredients: ['chickpeas', 'olive oil', 'garlic cloves', 'lemon', 'tahini']
+// }];
+
+
+
+
+// 챌린지 1/4 : _ _목록을 둘로 나누기
+// 이 예에서는 모든 사람의 목록을 보여줍니다.
+
+// 화학자 및 기타 모든 사람 이라는 두 개의 별도 목록을 차례로 표시하도록 변경합니다 .
+//  이전과 마찬가지로 다음을 확인하여 사람이 화학자인지 여부를 확인할 수 있습니다 person.profession === 'chemist'.
+
+// export default function List() {
+//   const chemists = people.filter(person =>
+//     person.profession === 'chemist'
+//   );
+
+//   const everyoneElse = people.filter(person =>
+//     person.profession !== 'chemist'
+//   );
+//   return (
+//     <article className="wrap">
+//       <h1>Scientists</h1>
+//       <h2>Chemists</h2>
+//       <ul>
+//         {chemists.map(person =>
+//         <li key={person.id}>
+//           <img
+//             src={getImageUrl(person)}
+//             alt={person.name}
+//           />
+//           <p>
+//             <b>{person.name}:</b>
+//             {' ' + person.profession + ' '}
+//             known for {person.accomplishment}
+//           </p>
+//         </li>
+//        )}
+//       </ul>
+//       <h2>Everyone Else</h2>
+//       <ul>
+//         {everyoneElse.map(person =>
+//           <li key={person.id}>
+//             <img 
+//               src={getImageUrl(person)}
+//               alt={person.name}
+//             />
+//             <p>
+//               <b>{person.name}:</b>
+//               know for {person.accomplishment}
+//             </p>
+//           </li>
+//           )}
+//       </ul>
+//     </article>
+//   );
+//         }
+
+
+
+// export const people = [{
+//   id: 0,
+//   name: 'Creola Katherine Johnson',
+//   profession: 'mathematician',
+//   accomplishment: 'spaceflight calculations',
+//   imageId: 'MK3eW3A'
+// }, {
+//   id: 1,
+//   name: 'Mario José Molina-Pasquel Henríquez',
+//   profession: 'chemist',
+//   accomplishment: 'discovery of Arctic ozone hole',
+//   imageId: 'mynHUSa'
+// }, {
+//   id: 2,
+//   name: 'Mohammad Abdus Salam',
+//   profession: 'physicist',
+//   accomplishment: 'electromagnetism theory',
+//   imageId: 'bE7W1ji'
+// }, {
+//   id: 3,
+//   name: 'Percy Lavon Julian',
+//   profession: 'chemist',
+//   accomplishment: 'pioneering cortisone drugs, steroids and birth control pills',
+//   imageId: 'IOjWm71'
+// }, {
+//   id: 4,
+//   name: 'Subrahmanyan Chandrasekhar',
+//   profession: 'astrophysicist',
+//   accomplishment: 'white dwarf star mass calculations',
+//   imageId: 'lrWQx8l'
+// }];
+
+
+// export function getImageUrl(person) {
+//   return (
+//     'https://i.imgur.com/' +
+//     person.imageId +
+//     's.jpg'
+//   );
+// }
+
+
+
+// const people = [{
+//   id: 0,
+//   name: 'Creola Katherine Johnson',
+//   profession: 'mathematician',
+// }, {
+//   id: 1,
+//   name: 'Mario José Molina-Pasquel Henríquez',
+//   profession: 'chemist',
+// }, {
+//   id: 2,
+//   name: 'Mohammad Abdus Salam',
+//   profession: 'physicist',
+// }, {
+//   name: 'Percy Lavon Julian',
+//   profession: 'chemist',  
+// }, {
+//   name: 'Subrahmanyan Chandrasekhar',
+//   profession: 'astrophysicist',
+// }];
+
+// export function getImageUrl(person) {
+//   return (
+//     'https://i.imgur.com/' +
+//     person.imageId +
+//     's.jpg'
+//   );
+// }
+
+
+// export default function List() {
+//   const chemists = people.filter(person =>
+//     person.profession === 'chemist'
+//   );
+//   const listItems = chemists.map(person =>
+//     <li>
+//       <img
+//         src={getImageUrl(person)}
+//         alt={person.name}
+//       />
+//       <p>
+//         <b>{person.name}:</b>
+//         {' ' + person.profession + ' '}
+//         known for {person.accomplishment}
+//       </p>
+//     </li>
+//   );
+//   return <ul style={{padding: '150px 50px 50px'}}>{listItems}</ul>;
+// }
 
 
 
