@@ -4,11 +4,13 @@
     font-size: 30px; 
     box-sizing: border-box;
 }
+.wrap { 
+  padding: 150px 50px 0; 
+}
 
-.main-slide {
-   
+.main-slide {   
     .swiper-slide {
-        min-height: 100vh;
+        height: 700px;
         background-size: cover;
         font-size: 100px;
         line-height: 200px;
@@ -45,8 +47,24 @@
     }
 }
 
-.mySwiper {   
-    
+.gallery-slide {
+  margin-top: 50px; 
+  .swiper-slide {
+    //width: 300px !important;
+    // height: 300px !important; 
+    img {
+      object-fit: cover;
+      object-position: center center;
+      width: 350px;
+      height: 350px;
+    }
+  }
+}
+
+
+
+
+.mySwiper {       
     .swiper-slide {
         position: relative;
         padding-top: 56.25%;        
@@ -55,10 +73,8 @@
             top: 0;
             left: 0; 
         }
-    }
-    
+    }    
 }
-
 
 .player-wrapper {
     position: relative;
@@ -74,9 +90,6 @@
     object-fit: cover;
 }
 
-.wrap { padding: 150px 50px 0; }
-
-
 .footer {
     min-height: 60px;
     padding: 20px;
@@ -84,7 +97,6 @@
     color: #fff;
     text-align: center;
 }
-
 
 .accordion {
     max-width: 600px;

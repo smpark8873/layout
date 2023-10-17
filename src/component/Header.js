@@ -1,4 +1,3 @@
-import {useState} from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -28,7 +27,7 @@ const HeaderWrap = styled.div`
 
 const Nav = styled.div`
     margin: 0 auto;
-    width: 1000px;
+    width: 1200px;
     ul {
         display: flex;
         flex-wrap: nowrap;
@@ -42,10 +41,10 @@ const Nav = styled.div`
             position: relative;
             > a {
                 display: block;
-                padding: 0 40px;
+                padding: 0 30px;
                 color: #fff;
                 line-height: 100px; 
-                font-size: 22px;
+                font-size: 20px;
                 text-decoration: 0;               
                 &.active {
                     font-weight: bold;
@@ -88,7 +87,8 @@ function Header(props) {
         <HeaderWrap>
             <h1><NavLink to="/">LOGO</NavLink></h1>            
             <Nav>
-                <ul>
+                <ul>                        
+                    <li><NavLink to="/Slide">Slide</NavLink></li>
                     <li>
                         <NavLink to="/Intro">ReactPlayer</NavLink>
                         <div className='depth2'>

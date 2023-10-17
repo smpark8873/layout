@@ -9,6 +9,7 @@ import ScrollAnimation from './pages/ScrollAnimation';
 import Layout from './pages/Layout';
 import Accordion from './pages/Accordion';
 import Ui from './pages/Ui';
+import Slide from './pages/Slide';
 // import Product from './pages/Product';
 import NotFound from './pages/NotFound';
 import './scss/common.scss';
@@ -20,6 +21,7 @@ const App = () => {
             <Header />                        
             <Routes>
               <Route path="/" element={<Main />}></Route>
+              <Route path="/Slide" element={<Slide />}></Route>
               <Route path="/Intro" element={<Intro />}></Route>
               <Route path="/Business" element={<Business />}></Route>
               <Route path="/Animation" element={<Animation />}></Route>

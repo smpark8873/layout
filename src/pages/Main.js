@@ -1,19 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, EffectFade, Autoplay, A11y } from 'swiper/modules';
 import { useState } from 'react';
 
-// Import Swiper styles
-import 'swiper/scss';
-import 'swiper/scss/navigation';
-import 'swiper/scss/pagination';
-import 'swiper/scss/scrollbar';
-import "swiper/scss/effect-fade";
 
-const MainWrapper = styled.div`
-	display: none;
-`;
 const ContentWrap = styled.div`
 	margin: 0 auto;
 	padding: 150px 50px 0;
@@ -118,21 +107,6 @@ const Main = (props) => {
 	const name = 'Gregorio Y. Zara';
 	return (
 		<div>
-			<MainWrapper>
-				<Swiper className='main-slide' modules={[Navigation, Pagination, EffectFade, Autoplay, A11y]} 
-					spaceBetween={50}
-					slidesPerView={1}
-					// navigation
-					// pagination={{ clickable: true }}
-					effect="fade"
-					autoplay={{ delay: 2000, disableOnInteraction: false }}
-					loop={true}
-					>
-					<SwiperSlide className='slide-item1'></SwiperSlide>
-					<SwiperSlide className='slide-item2'></SwiperSlide>
-					<SwiperSlide className='slide-item3'></SwiperSlide>				
-				</Swiper>			
-			</MainWrapper>
 			<ContentWrap>
 				<div className='section'>
 					<h2>빠른 시작</h2>
