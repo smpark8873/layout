@@ -29,12 +29,12 @@ const ActiveItem = styled.div`
 
 `;
 
-const Contents = () => {
+function Contents() {
     //const [isActive, setIsActive] = useState(false);
 
-    const handleClick = event => {   
-        event.currentTarget.classList.toggle('active').siblings.classList.remove('active');         
-       // setIsActive(current => !current);
+    const handleClick = event => { 
+         document.querySelectorAll('li').forEach(list => { list.classList.remove('active') })
+         event.currentTarget.classList.toggle('active');  
     };  
 
     return (
