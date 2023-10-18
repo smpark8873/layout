@@ -38,10 +38,11 @@ function Slide() {
                 loop={true}
                 navigation={true}
                 pagination={{ clickable: true }}                
-                autoplay={{ delay: 2000, disableOnInteraction: true }}
-                loopedSlides={1}
-             //   speed = '500'
-              //  reverseDirection = {true}
+                autoplay={{ delay: 500, disableOnInteraction: true }}
+                loopedSlides={3}                
+                speed = '500'
+                reverseDirection = {true}
+                centeredSlides= {true}
                 >
                 <SwiperSlide><img src="https://lifet-img.s3.ap-northeast-2.amazonaws.com/6b980705-1d57-46a4-8193-ca490d19d00d" /></SwiperSlide>
                 <SwiperSlide><img src="https://img.catpre.com/mobile/catpre/event/main_banner/_top1_m_202310131412371.jpg" /></SwiperSlide>
