@@ -116,7 +116,7 @@ const Main = (props) => {
 						<p className='dot'>React 구성 요소는 마크업을 반환하는 JavaScript 함수입니다.</p>
 						<p className='dot'>function MyButton(){} 선언해서 &lt;MyButton /&gt;로 다른 구성요소에 중첩</p>
 						<p className='dot red'>&lt;MyButton /&gt;대문자로 시작한다는 점에 유의!!! React 요소 이름은 항상 대문자로 시작해야하면 HTML태그는 소문자여야 함!!</p>
-						<p className='dot'>키워드 <em>export default</em>는 파일의 주요 구성 요소를 지정</p>
+						<p className='dot'>키워드 <em>export default</em>는 파일의 주요 구성 요소를 지정</p>						
 					</div>
 
 					<h3>JSX로 마크업 작성</h3>
@@ -137,7 +137,7 @@ const Main = (props) => {
 					<div className='content'>
 						<p className='dot'>중괄호를 사용하면 JavaScript로 "이스케이프백"하여 코드의 일부 변수를 포함하고 사용자에게 표시</p>
 						<p className='dot'>&#123;user.name&#125;</p>
-						<p className='dot'>SX 중괄호 안에 문자열 연결 과 같은 더 복잡한 표현식을 넣을 수도 있습니다 .</p>
+						<p className='dot'>SX 중괄호 안에 문자열 연결과 같은 더 복잡한 표현식을 넣을 수도 있습니다 .</p>
 					</div>
 
 					<h3>조건부 렌더링</h3>
@@ -159,6 +159,7 @@ const Main = (props) => {
 
 					<h3>이벤트에 응답</h3>
 					<div className='content'>
+						<p className='dot red bold'>onClick=&#91;handleClick&#93; 끝에 괄호가 없다는 것에 주목!!! 함수 호출이 아니라 전달하기만 하면 된다!!!!</p>
 						<p className='dot'>구성 요소 내부에 <em>이벤트 핸들러</em>함수를 선언하여 이벤트에 응답할 수 있음</p>
 						<button onClick={handleClick}>Clink me</button>
 					</div>
