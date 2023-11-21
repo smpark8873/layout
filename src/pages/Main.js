@@ -159,7 +159,7 @@ const Main = (props) => {
 
 					<h3>이벤트에 응답</h3>
 					<div className='content'>
-						<p className='dot red bold'>onClick=&#91;handleClick&#93; 끝에 괄호가 없다는 것에 주목!!! 함수 호출이 아니라 전달하기만 하면 된다!!!!</p>
+						<p className='dot red bold'>onClick=&#123;handleClick&#125; 끝에 괄호가 없다는 것에 주목!!! 함수 호출이 아니라 전달하기만 하면 된다!!!!</p>
 						<p className='dot'>구성 요소 내부에 <em>이벤트 핸들러</em>함수를 선언하여 이벤트에 응답할 수 있음</p>
 						<button onClick={handleClick}>Clink me</button>
 					</div>
