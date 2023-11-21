@@ -7,18 +7,20 @@ const HeaderWrap = styled.div`
     top: 0;
     left:0;
     width: 100%;
-    min-height: 100px;
+    min-height: 70px;
     background-color: #333; 
     color: #fff;  
     box-sizing: border-box;
     z-index: 100;
     h1 {
         position: absolute;
-        top: 20px;
-        left: 50px;
-        margin: 0;         
+        top: 0px;
+        left: 0;
+        margin: 0;  
+        line-height: 70px;       
         font-size: 40px;
         a {
+            padding: 0 50px;
             text-decoration: none;
             color: #fff;           
         }              
@@ -33,7 +35,7 @@ const Nav = styled.div`
         flex-wrap: nowrap;
         list-style: none;
         margin: 0; 
-        height: 100px;
+        height: 70px;
         li { 
             &:hover .depth2 {
                 height: auto;               
@@ -43,7 +45,7 @@ const Nav = styled.div`
                 display: block;
                 padding: 0 30px;
                 color: #fff;
-                line-height: 100px; 
+                line-height: 70px; 
                 font-size: 20px;
                 text-decoration: 0;               
                 &.active {

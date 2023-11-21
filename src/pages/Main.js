@@ -12,8 +12,8 @@ const ContentWrap = styled.div`
 		h2 {
 			margin: 0;
 			line-height: 34px;
-			font-size: 32px;		
-		}
+			font-size: 32px;
+		}		
 		h3 {
 			margin: 30px 0 10px;
 			line-height: 26px; 
@@ -215,6 +215,7 @@ const Main = (props) => {
 						<p className='dot'>React는 동일한 기술을 사용하면서도 상호작용을 최우선으로 생각합니다.</p>
 						<p className='dot'><strong> React 구성요소는 마크업을 뿌릴 수 있는 JavaScript 함수입니다 .</strong></p>
 
+						<p>### 구성요소를 빌드하는 방법 ###</p>
 						<h4>1단계 : 컴포넌트 내보내기</h4>
 						<p className='dot'>접두사 는 표준 JavaScript 구문<em className='red'>export default</em></p>
 						<p className='dot'>나중에 다른 파일에서 가져올 수 있도록 파일의 주요 기능을 표시할 수 있습니다.</p>
@@ -262,7 +263,7 @@ const Main = (props) => {
 						</tr>
 						<tr>
 							<th>명명된 가져오기</th>
-							<td>import $#123; Profile &#125; from './Gallery.js'; </td>
+							<td>import &#123; Profile &#125; from './Gallery.js'; </td>
 							<td> export function Profile() {}</td>
 						</tr>
 					</table>
@@ -300,6 +301,12 @@ const Main = (props) => {
 
 						<h4>전문가팁 : JSX 변환기 사용</h4>
 						<p className='dot'>오류 메시지는 마크업 수정에 대한 올바른 방향을 알려주는 경우가 많습니다.</p>
+						<a href="https://transform.tools/html-to-jsx" target='blank'>https://transform.tools/html-to-jsx</a>
+
+						<h4>요약</h4>
+						<p className='dot'>React 컴포넌트는 서로 관련되어 있기 때문에 렌더링 논리를 마크업과 함께 그룹화 한다.</p>
+						<p className='dot'>JSX는 HTML과 유사하지만 몇가지 차이점이 있다. 필요한 경우 변환기를 사용할 수 있다.</p>
+						<p className='dot'>오류 메시지는 마크업 수정에 대한 올바른 방향을 알려주는 경우가 많다.</p>
 					</div>
 				</div>
 				<div className='section'>
