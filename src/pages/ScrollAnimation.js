@@ -35,31 +35,51 @@ import "animate.css/animate.min.css";
 
 // export default ScrollAnimaiton;
 
-function Profile() {
-    return (
-        <img 
-            src="https://i.imgur.com/MK3eW3As.jpg"
-            alt="Katherine Johnson"
-        />
-    );
-}
-export function Gallery() {
-    return (
-        <section>
-            <h1>Amazing scientists</h1>
-            <Profile />
-            <Profile />
-            <Profile />
-        </section>
-    );
-}
+// function Profile() {
+//     return (
+//         <img 
+//             src="https://i.imgur.com/MK3eW3As.jpg"
+//             alt="Katherine Johnson"
+//         />
+//     );
+// }
+// export function Gallery() {
+//     return (
+//         <section>
+//             <h1>Amazing scientists</h1>
+//             <Profile />
+//             <Profile />
+//             <Profile />
+//         </section>
+//     );
+// }
 
-
+function Item({name, isPacked}) {   
+    return (
+        <li className='item'>{name} {isPacked && '✔'}</li>
+    );    
+}
 
 const ScrollAnimaiton = () => {
+    
   return (
-    <>
-    ㅇㅇㅇ
+    <div className='wrap'>
+        <h1>Sally Ride's Packing List</h1>
+        <ul>
+            <Item
+                isPacked={true}
+                name="Space suit"
+            />
+            <Item
+                isPacked={true}
+                name="Helmet with a golden leaf"
+            />
+            <Item
+                isPacked={false}
+                name="Photo of Tam"
+            />
+        </ul> 
+    
         {/* 웹에서 HTML을 사용하면 및 다음과 같은 내장된 태그 세트를 사용하여 풍부하고 구조화된 문서를 만들 수 있습니다  */}
         {/* <article>
             <h1>My First Component</h1>
@@ -82,7 +102,7 @@ const ScrollAnimaiton = () => {
                 <DocumentationText />
             </PageContent>
         </PageLayout> */}
-    </>
+    </div>
   )
 }
 
