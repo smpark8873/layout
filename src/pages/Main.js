@@ -340,17 +340,105 @@ const Main = (props) => {
 				</div>
 				<div className='section'>
 					<h2>Props를 Component에 전달하기</h2>
-					<p>props(properties)는 컴포넌트 속성을 설정할때 사용</p>
-					<p>props 값은 해당 컴포넌트를 불러와 사용하는 부모 컴포넌트에서만 설정 가능</p>
-					<p>props를 통해 객체, 배열 및 삼수를 포함한 모든 JavaScript값을 전달 가능</p>
+					<div className='content'>
+						<p className='dot'>props(properties)는 컴포넌트 속성을 설정할때 사용</p>
+						<p className='dot'>props 값은 해당 컴포넌트를 불러와 사용하는 부모 컴포넌트에서만 설정 가능</p>
+						<p className='dot'>props를 통해 객체, 배열 및 삼수를 포함한 모든 JavaScript값을 전달 가능</p>
+					</div>
 				</div>
 				<div className='section'>
 					<h2>조건부 렌더링</h2>
-					<p>if명령문, &&연산자, 삼항연산자( ? : )</p>
+					<p p className='dot'>if명령문, &&연산자, 삼항연산자( ? : )</p>
 					
 					<h3>조건부로 JSX반환</h3>
-					<div className="content"></div>
-				</div>	
+					<div className="content">
+						
+					</div>
+					<h3>조건부로 아무것도 반환하지 않음null </h3>
+					<div className="content">
+						<p className='dot'>return null</p>
+					</div>
+					<h3>조건부로 JSX 포함</h3>
+					<h3>조건부(삼항) 연산자( ? :)</h3>
+					<h3>논리 AND 연산자( &&)</h3>
+					<p className='dot'>JavaScript && 표현식은 왼쪽(조건)이 이면 오른쪽(여기서는 체크 표시)의 값을 반환합니다 </p>
+					<p className='dot'>&& 왼쪽에 숫자를 넣지 마세요!!!</p>
+					<h3>조건부로 JSX를 변수에 할당</h3>
+					<h3>요약</h3>
+					<div className="content">
+						<p className='dot'>React에서는 JavaScript를 사용하여 분기 논리를 제어한다.</p>
+						<p className='dot'>if 명령문을 사용하여 JSX 표현식을 조건부로 반환할 수 있다.</p>
+						<p className='dot'>일부 JSX를 조건부로 변수에 저장한 다음 중괄호를 사용하여 다른 JSX 안에 포함시킬 수 있다.</p>
+						<p className='dot'>JSX에서는 if,render, else를 &#123;cond ? a : b&#125;를 의미한다.</p>
+						<p className='dot'>JSX에서는 if,render 그렇지 안흐면 아무것도 없음을 &#123;cond && a &#125; 의미한다.</p>
+						<p className='dot'>단축키는 일반적이지만 if plain을 선호하는 경우에는 단축키를 사용할 필요가 없다.</p>
+						<p className='dot'></p>
+					</div>
+				</div>
+				<div className='section'>
+					<h2>렌더링 목록</h2>
+					<p>데이터 컬렉션에서 여러 유사한 구성 요소를 표시하는 경우가 많다.</p>
+					<p>JavaScript를 사용하여 배열에서 구성 요소를 렌더링하는 방법 map()</p>
+					<p>JavaScript를 사용하여 배열에서 구성 요소를 렌더링하는 방법 filter()</p>
+					<p>React 키를 사용하는 시기와 이유</p>
+
+					<h3>배열에서 데이터 렌더링</h3>
+					<div className='content'>
+						<h4>배열에서 항목 목록을 생성하는 방법</h4>
+						<p className='dot'>1. 데이터를 배열로 이동</p>
+						ex) const peopel = [
+							'Creola Katherine Johnson: mathematician',
+							'Mario José Molina-Pasquel Henríquez: chemist',
+							'Mohammad Abdus Salam: physicist',
+							'Percy Lavon Julian: chemist',
+							'Subrahmanyan Chandrasekhar: astrophysicist'
+						]
+						<p className='dot'>2. 멤버 people를 새로운 JSX노드 배열로 매핑</p>
+						ex) const listItems = people.map(person =&gt; &lt;li&gt;&#123;person&#125;&lt;/li&gt;);
+						<p className='dot'>3. listItems 다음으로 래핑된 구성 요소에서 돌아옵니다. </p>
+						ex) return &lt;ul&gt;&#123;listItems&#125;&lt;/ul&gt;;
+
+					</div>
+					<h3>항목 배열 필터링</h3>
+					<div className='content'>
+						<p className='dot'>JavaScript의 filter()메소드를 사용하여 직업이 chemist인 사람들만 반환할 수 있습니다.</p>
+						<h4>방법</h4>
+					</div>
+					<h3>목록 항목을 순서대로 유지key </h3>
+					<div className='content'>
+						<p className='dot red bold'>호출 내부의 JSX 요소에는 map()항상 키가 필요합니다!</p>
+						<p className='dot'>키는 각 구성 요소가 어떤 배열 항목에 해당하는지 React에게 알려주므로 나중에 일치시킬 수 있습니다. </p>
+						<p className='dot'>배열 항목이 이동(예: 정렬로 인해)되거나 삽입되거나 삭제될 수 있는 경우 이는 중요합니다. </p>
+					</div>
+					<h3>어디서 구할 수 있나요?key </h3>
+					<div className='content'>
+						<p className='dot'>데이터베이스의 데이터: 본질적으로 고유한 데이터베이스 키/ID를 사용 할 수 있다.</p>
+						<p className='dot'>로컬에서 생성된 데이터: 데이터가 로컬에서 생성되고 유지되는 경우(예: 메모 작성 앱의 메모) 항목을 생성할 때 crypto.randomUUID()처럼 증분 카운터나 패키지를 사용</p>
+					</div>
+					<h3>키의 규칙</h3>
+					<div className='content'>
+						<p className='dot'>키는 형제간에 고유해야한다. 그러나 다른배열의 jsx노드에서 동일한 키를 사용하는 것은 괜찮다.</p>
+						<p className='dot'>키는 변경되어서는 안된다. 그렇지 않으면 키의 목적이 무산된다. 렌더링 하는 동안 생성 금지!!</p>
+					</div>
+					<h3>React에 키가 필요한 이유는 무엇입니까?</h3>
+					<div className='content'>
+						<p className='dot'>데스크탑의 파일에 이름이 없다고 상상해 보십시오. </p>
+						<p className='dot'>폴더의 파일 이름과 배열의 JSX 키는 비슷한 용도로 사용됩니다.  형제간에 항목을 고유하게 식별할 수 있다. 위치가 변경되더라도 react는 해당 항목을 전체 수명동안 식별 할 수 있다.</p>
+						<p className='dot bold'>배열에 있는 인덱스키를 사용하면 항목을 삽입하거나 삭제했을때 배열이 재정렬되면서 렌더링 순서가 변경된다. </p>
+						<p className='dot'>즉석에서 키를 생성하지 마라. 속도가 느릴뿐만아니라 목록 항목 내의 사용자 입력이 손실되므로 안정적인 id를 사용하자</p>
+						<p className='dot'>key구성 요소는 소품으로 수신되지 않습니다 . 이는 React 자체에서 힌트로만 사용됩니다. 컴포넌트에 ID가 필요한 경우 별도의 prop: 으로 전달해야 합니다.</p>
+					</div>
+					<h3>요약</h3>
+					<div className='content'>
+						<p className='dot'>컴포넌트에서 배열 및 객체와 같은 데이터 구조로 데이터를 이동하는 방법</p>
+						<p className='dot'>JavaScript의 map()</p>
+						<p className='dot'>JavaScript를 사용하여 필터링된 항복의 배열을 만드는 방법</p>
+						<p className='dot'>Key 위치나 데이터가 변경되더라고 React가 각 구성 요소를 추적할 수 있도록 컬렉션의 각 구성요소를 설정하는 이유와 방법</p>
+					</div>
+
+					
+
+				</div>
 			</ContentWrap>
 		</div>
 	);
