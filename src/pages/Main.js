@@ -397,12 +397,15 @@ const Main = (props) => {
 						ex) const listItems = people.map(person =&gt; &lt;li&gt;&#123;person&#125;&lt;/li&gt;);
 						<p className='dot'>3. listItems 다음으로 래핑된 구성 요소에서 돌아옵니다. </p>
 						ex) return &lt;ul&gt;&#123;listItems&#125;&lt;/ul&gt;;
-
 					</div>
 					<h3>항목 배열 필터링</h3>
 					<div className='content'>
 						<p className='dot'>JavaScript의 filter()메소드를 사용하여 직업이 chemist인 사람들만 반환할 수 있습니다.</p>
 						<h4>방법</h4>
+						<p>필터링을 호출하여 화확자라는 새로운 배열을 만든다</p>
+						<p>const chemists = people.filter(person => person.profession === 'chemist'	);</p>
+						<p>2. 매핑</p>
+						<p>3. 구성요소 반환</p>
 					</div>
 					<h3>목록 항목을 순서대로 유지key </h3>
 					<div className='content'>
@@ -435,9 +438,56 @@ const Main = (props) => {
 						<p className='dot'>JavaScript를 사용하여 필터링된 항복의 배열을 만드는 방법</p>
 						<p className='dot'>Key 위치나 데이터가 변경되더라고 React가 각 구성 요소를 추적할 수 있도록 컬렉션의 각 구성요소를 설정하는 이유와 방법</p>
 					</div>
-
-					
-
+				</div>
+				<div className='section'>
+					<h2>구성 요소를 순수하게 유지</h2>
+					<p>일부 JavaScript함수는 순수합니다. 순수함수는 계산만 수행하며 그 이상은 수행하지 않습니다.</p>
+					<h3>순도: 공식으로서의 구성요소</h3>
+					<div className='content'>
+						<p className='dot'>그것은 자신의 일을 생각합니다. 호출되기 전에 존재했던 객체나 변수는 변경되지 않습니다.</p>
+						<p className='dot'>동일한 입력, 동일한 출력, 동일한 입력이 주어지면 순수 함수는 항상 동일한 결과를 반환해야합니다.</p>						
+					</div>
+					<h3>부작용:(의도하지 않은)결과</h3>
+					<div className='content'>
+						<p className='dot'>React의 렌더링 프로세스는 항상 순수해야 합니다. 구성 요소는 JSX 만 반환 해야 하며, 렌더링 전에 존재했던 객체나 변수를 변경하면 안 됩니다. 그러면 불순해질 수 있습니다!</p>
+					</div>
+				</div>
+				<div className='section'>
+					<h2>UI를 트리로 이해하기</h2>
+					<div className='content'>
+						<p className='dot'>React 및 기타 많은 UI 라이브러리는 UI를 트리로 모델링</p>
+						<p className='dot'>앱을 트리로 생각하는 것은 구성요소간의 관계를 이해하는데 유용, 성능 및 상태관리와 같은 미래개념 디버깅에 도움</p>
+					</div>
+					<h3>UI를 트리로 표현</h3>
+					<p className='dot'>React 앱을 통해 데이터가 흐르는 방식과 렌더링 및 앱 크기를 최적화하는 방법을 이해하는 데 유용한 도구</p>
+					<h3>렌더 트리</h3>
+					<h3>요약</h3>
+					<div className='content'>
+						<p className='dot'>트리는 엔터티 간의 관계를 나타내는 일반적인 방법. UI를 모델링하는 데 자주 사용</p>
+						<p className='dot'>렌더 트리는 단일 렌더 전반에 걸쳐 React 구성요소간의 중첩 관계를 나타냄</p>
+						<p className='dot'>조건부 렌더링을 사용하면 렌더링 크리가 여러 렌더링에 걸쳐 변경될 수 있다. prop값이 다르면 구성 요소가 다른 하위 구성 요소를 렌더링할 수 있다.</p>
+						<p className='dot'>렌더 트리는 최상위 구성 요소와 리프 구성 요소가 무엇인지 식별하는데 도움이 된다. 최상위 구성 요소는 그 아래 있는 모든 구성 요소의 렌더링 성능에 영향을 미치며,
+							리프 구성 요소는 자주 다시 렌더링 되는 경우가 많다. 이를 식별하는 것은 렌더링 성능을 이해하고 디버깅하는데 유용하다.
+						</p>
+						<p className='dot'>종속성 트리는 React앱의 모듈 종속성을 나타낸다.</p>
+						<p className='dot'>종속성 트리는 빌드 도구에서 앱을 출시하는 데 필요한 코드를 묶는데 사용</p>
+						<p className='dot'>종속성 트리는 페인팅 시간을 늦추고 번들로 묶인 코드를 최적화할 수 있는 기회를 제공하는 대규모 번들 크기를 디버깅하는데 유용</p>
+					</div>
+				</div>
+				<div className='section'>
+					<h2>상호작용 추가</h2>
+					<p>React에서는 시간이 지남에 따라 변하는 데이터를 <strong>상태</strong>라고 한다.</p>
+					<p>모든 구성요소에 상태를 추가하고 필요에 따라 업데이트 가능</p>
+					<div className='content'>
+						<p className='dot'>사용자가 시작한 이벤트를 처리하는 방법</p>
+						<p className='dot'>구성요소가 상태와 함께 정보를 "기억"하도록 만드는 방법</p>
+						<p className='dot'>React가 두 단계로 UI를 업데이트하는 방법</p>
+						<p className='dot'>상태를 변경한 직후에 상태가 업데이트되지 않는 이유</p>
+						<p className='dot'>여러 상태 업데이트를 대기열에 추가하는 방법</p>
+						<p className='dot'>상태의 객체를 업데이트하는 방법</p>
+						<p className='dot'>상태의 배열을 업데이트하는 방법</p>
+					</div>
+					<h3>이벤트에 응답</h3>
 				</div>
 			</ContentWrap>
 		</div>
