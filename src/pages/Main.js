@@ -10,7 +10,7 @@ const ContentWrap = styled.div`
 	.section {
 		padding: 30px 0; 
 		h2 {
-			margin: 0;
+			margin: 0 0 20px;
 			line-height: 34px;
 			font-size: 32px;
 		}		
@@ -377,10 +377,10 @@ const Main = (props) => {
 				</div>
 				<div className='section'>
 					<h2>렌더링 목록</h2>
-					<p>데이터 컬렉션에서 여러 유사한 구성 요소를 표시하는 경우가 많다.</p>
-					<p>JavaScript를 사용하여 배열에서 구성 요소를 렌더링하는 방법 map()</p>
-					<p>JavaScript를 사용하여 배열에서 구성 요소를 렌더링하는 방법 filter()</p>
-					<p>React 키를 사용하는 시기와 이유</p>
+					<p className='dot'>데이터 컬렉션에서 여러 유사한 구성 요소를 표시하는 경우가 많다.</p>
+					<p className='dot'>JavaScript를 사용하여 배열에서 구성 요소를 렌더링하는 방법 map()</p>
+					<p className='dot'>JavaScript를 사용하여 배열에서 구성 요소를 렌더링하는 방법 filter()</p>
+					<p className='dot'>React 키를 사용하는 시기와 이유</p>
 
 					<h3>배열에서 데이터 렌더링</h3>
 					<div className='content'>
