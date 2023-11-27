@@ -403,7 +403,7 @@ const Main = (props) => {
 						<p className='dot'>JavaScript의 filter()메소드를 사용하여 직업이 chemist인 사람들만 반환할 수 있습니다.</p>
 						<h4>방법</h4>
 						<p>필터링을 호출하여 화확자라는 새로운 배열을 만든다</p>
-						<p>const chemists = people.filter(person => person.profession === 'chemist'	);</p>
+						<p>const chemists = people.filter(person =&gt; person.profession === 'chemist'	);</p>
 						<p>2. 매핑</p>
 						<p>3. 구성요소 반환</p>
 					</div>
@@ -488,6 +488,12 @@ const Main = (props) => {
 						<p className='dot'>상태의 배열을 업데이트하는 방법</p>
 					</div>
 					<h3>이벤트에 응답</h3>
+					<p>React를 사용하면 JSX에 이벤트 핸들러 추가 가능</p>
+					<p>사용자 상호 작용에 대한 응답으로 트리거되는 자체 함수임</p>
+					<h3>상태: 구성 요소의 메모리</h3>
+					<p>Hook useState을 사용하여 구성 요소에 상태를 추가 할 수 있음</p>
+					<p>Hook useState을 사용하면 상태 변수를 선언할 수 있습니다. 초기 상태를 가져와 현재 상태와 이를 업데이트할 수 있는 상태 설정 함수 등 한 쌍의 값을 반환합니다.</p>
+					<p>ex) const [index, setIndex] = useState(0);</p>
 				</div>
 			</ContentWrap>
 		</div>

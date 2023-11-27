@@ -105,6 +105,7 @@ function Header(props) {
                     <li><NavLink to="/Layout">Layout</NavLink></li>
                     <li><NavLink to="/Accordion">Accordion</NavLink></li>
                     <li><NavLink to="/Ui">Ui</NavLink></li>
+                    <li><NavLink to="/Test">Test</NavLink></li>
                 </ul>
             </Nav>
         </HeaderWrap>
