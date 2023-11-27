@@ -488,12 +488,17 @@ const Main = (props) => {
 						<p className='dot'>상태의 배열을 업데이트하는 방법</p>
 					</div>
 					<h3>이벤트에 응답</h3>
-					<p>React를 사용하면 JSX에 이벤트 핸들러 추가 가능</p>
-					<p>사용자 상호 작용에 대한 응답으로 트리거되는 자체 함수임</p>
+					<p className='dot'>React를 사용하면 JSX에 이벤트 핸들러 추가 가능</p>
+					<p className='dot'>사용자 상호 작용에 대한 응답으로 트리거되는 자체 함수임</p>
 					<h3>상태: 구성 요소의 메모리</h3>
-					<p>Hook useState을 사용하여 구성 요소에 상태를 추가 할 수 있음</p>
-					<p>Hook useState을 사용하면 상태 변수를 선언할 수 있습니다. 초기 상태를 가져와 현재 상태와 이를 업데이트할 수 있는 상태 설정 함수 등 한 쌍의 값을 반환합니다.</p>
-					<p>ex) const [index, setIndex] = useState(0);</p>
+					<p className='dot'>Hook useState을 사용하여 구성 요소에 상태를 추가 할 수 있음</p>
+					<p className='dot'>Hook useState을 사용하면 상태 변수를 선언할 수 있습니다. 초기 상태를 가져와 현재 상태와 이를 업데이트할 수 있는 상태 설정 함수 등 한 쌍의 값을 반환합니다.</p>
+					<p className='dot'>ex) const [index, setIndex] = useState(0);</p>
+					<h3>렌더링 및 커밋</h3>
+					<p className='dot'>구성 요소가 화면에 표시되기 전에 React로 렌더링되어야 한다.</p>
+					<p className='bold'>1. 렌더링 트리거 (식당의 주문을 주방으로 전달)</p>
+					<p className='bold'>2. 컴포넌트 렌더링 (주방에서 주문 준비)</p>
+					<p className='bold'>3. DOM에 커밋 (테이블 위에 주문 배치)</p>
 				</div>
 			</ContentWrap>
 		</div>
