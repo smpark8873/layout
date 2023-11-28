@@ -1,4 +1,5 @@
-// import { useState } from 'react';
+import { useState } from 'react';
+
 
 // const sculptureList = [{
 //     name: 'Homenaje a la Neurocirugía',
@@ -120,22 +121,69 @@
 
 
 
-function Image() {
-  return (
-    <img src="https://i.imgur.com/ZF6s192.jpg"
-        alt="'Floralis Genérica' by Eduardo Catalano: a gigantic metallic flower sculpture with reflective petals" />
-  );
-}
+// function Image() {
+//   return (
+//     <img src="https://i.imgur.com/ZF6s192.jpg"
+//         alt="'Floralis Genérica' by Eduardo Catalano: a gigantic metallic flower sculpture with reflective petals" />
+//   );
+// }
 
+
+// export default function Test2() {
+//  return(
+//   <div className='wrap'>
+//     <h1>Inspiring Sculptures</h1>
+//     <Image />
+//       <Image />
+//       <Image />
+//   </div>
+  
+//  )
+// }
+
+// export default function Test2() {
+//   const [number, setNumber] = useState(0);
+
+//   return(
+//     <div className='wrap'>
+//       <h1>{number}</h1>
+//       <button onClick={()=> {
+//         setNumber(number + 5);
+//       }}> + 5</button>
+//     </div>
+//   );
+// }
 
 export default function Test2() {
- return(
-  <div className='wrap'>
-    <h1>Inspiring Sculptures</h1>
-    <Image />
-      <Image />
-      <Image />
-  </div>
-  
- )
+  const [to,setTo] = useState('Alice');
+  const [message, setMessage] = useState('Hello');
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    setTimeout(()=> {
+      alert(`You said ${message} to ${to}`);
+    },5000);
+  }
+
+  return (
+    <div className='wrap'>
+      <form onSubmit={handleSubmit}>
+        <label>
+          To:{' '}
+          <select
+            value={to}
+            onChange={e => setTo(e.target.value)}>
+            <option value="Alice">Alice</option>
+            <option value="Bob">Bob</option>
+          </select>
+        </label>
+        <textarea
+          placeholder="Message"
+          value={message}
+          onChange={e => setMessage(e.target.value)}
+        />
+        <button type="submit">Send</button>
+      </form>
+      </div>
+  );
 }

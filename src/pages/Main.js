@@ -516,6 +516,18 @@ const Main = (props) => {
 				<div className='section'>
 					<h2>스냅샷으로 상태</h2>
 					<h3>상태를 설정하면 렌더링이 트리거된다.</h3>
+					<p className='dot'>React는 한 렌더의 이벤트 핸들러 내에서 상태 값을 "고정"으로 유지합니다. </p>
+					<h3>요약</h3>
+					<p className='dot'>상태를 설정하면 새로운 렌더링이 요청됩니다.</p>
+					<p className='dot'>React는 마치 선반에 있는 것처럼 구성 요소 외부에 상태를 저장합니다.</p>
+					<p className='dot'>호출하면 useState 상태의스냅샷을 제공</p>
+					<p className='dot'>변수와 이벤트 핸들러는 다시 렌더링해도 생존하지 않는다. 모든 렌더링에는 자체 이벤트 핸들러가 있다.</p>
+					<p className='dot'>모든 렌더(및 그 내부함수)는 항상 React가 해당 렌더에 제공한 상태의 스냅샷을 확인한다.</p>
+					<p className='dot'>렌더링된 JSX에 대해 생각하는 방식과 유사하게 이벤트 핸들러에서 상태를 정신적으로 대체할 수 있다.</p>
+					<p className='dot'>과거에 생성된 이벤트 핸들러는 생성된 렌더링의 상태 값을 갖는다.</p>
+				</div>
+				<div className='section'>
+					<h2>일련의 상태 업테이트 대기열에 넣기</h2>
 				</div>
 			</ContentWrap>
 		</div>
