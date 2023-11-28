@@ -499,6 +499,23 @@ const Main = (props) => {
 					<p className='bold'>1. 렌더링 트리거 (식당의 주문을 주방으로 전달)</p>
 					<p className='bold'>2. 컴포넌트 렌더링 (주방에서 주문 준비)</p>
 					<p className='bold'>3. DOM에 커밋 (테이블 위에 주문 배치)</p>
+					<h4>1단계: 렌더링 트리거</h4>
+					<p className='dot'>이는 구성요소의 초기 렌더링</p>
+					<p className='dot'>구성요소 상태 업데이트시 다시 렌더링</p>
+					<h4>2단계: React가 구성 요소를 렌더링</h4>
+					<p className='dot'> "렌더링"은 React가 구성 요소를 호출하는 것</p>
+					<p className='dot'>초기 렌더링 시 React는 루트 구성 요소를 호출</p>
+					<p className='dot'>후속 렌더링의 경우 React는 상태 업데이트가 렌더링을 트리거한 함수 구성 요소를 호출합</p>
+					<h4>3단계: React는 DOM에 변경 사항을 커밋합니다.</h4>
+					<p className='dot'>초기 렌더링의 경우 react는 appendChild() DOM API를 사용하여 생성된 모든 DOM 노드를 화면에 배치</p>
+					<p className='dot'>재렌더링의 경우 react는 DOM이 최신 렌더링 출력과 일치하도록 최소한의 필수 작업을 적용</p>
+					<p className='dot bold'>React는 렌더링 간에 차이가 있는 경우에만 DOM 노드를 변경</p>
+					<h3>요약</h3>
+					<p className='dot'>React 앱의 화면 업데이트 세단계 : Trigger > Render > Commit</p>
+				</div>
+				<div className='section'>
+					<h2>스냅샷으로 상태</h2>
+					<h3>상태를 설정하면 렌더링이 트리거된다.</h3>
 				</div>
 			</ContentWrap>
 		</div>
