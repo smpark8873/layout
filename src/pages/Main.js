@@ -493,7 +493,7 @@ const Main = (props) => {
 					<h3>상태: 구성 요소의 메모리</h3>
 					<p className='dot'>Hook useState을 사용하여 구성 요소에 상태를 추가 할 수 있음</p>
 					<p className='dot'>Hook useState을 사용하면 상태 변수를 선언할 수 있습니다. 초기 상태를 가져와 현재 상태와 이를 업데이트할 수 있는 상태 설정 함수 등 한 쌍의 값을 반환합니다.</p>
-					<p className='dot'>ex) const [index, setIndex] = useState(0);</p>
+					<p className='dot'>ex&gt; const [index, setIndex] = useState(0);</p>
 					<h3>렌더링 및 커밋</h3>
 					<p className='dot'>구성 요소가 화면에 표시되기 전에 React로 렌더링되어야 한다.</p>
 					<p className='bold'>1. 렌더링 트리거 (식당의 주문을 주방으로 전달)</p>
@@ -511,7 +511,7 @@ const Main = (props) => {
 					<p className='dot'>재렌더링의 경우 react는 DOM이 최신 렌더링 출력과 일치하도록 최소한의 필수 작업을 적용</p>
 					<p className='dot bold'>React는 렌더링 간에 차이가 있는 경우에만 DOM 노드를 변경</p>
 					<h3>요약</h3>
-					<p className='dot'>React 앱의 화면 업데이트 세단계 : Trigger > Render > Commit</p>
+					<p className='dot'>React 앱의 화면 업데이트 세단계 : Trigger &gt; Render &gt; Commit</p>
 				</div>
 				<div className='section'>
 					<h2>스냅샷으로 상태</h2>
