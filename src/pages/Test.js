@@ -154,36 +154,66 @@ import { useState } from 'react';
 //   );
 // }
 
-export default function Test2() {
-  const [to,setTo] = useState('Alice');
-  const [message, setMessage] = useState('Hello');
+// export default function Test2() {
+//   const [to,setTo] = useState('Alice');
+//   const [message, setMessage] = useState('Hello');
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    setTimeout(()=> {
-      alert(`You said ${message} to ${to}`);
-    },5000);
+//   function handleSubmit(e) {
+//     e.preventDefault();
+//     setTimeout(()=> {
+//       alert(`You said ${message} to ${to}`);
+//     },5000);
+//   }
+
+//   return (
+//     <div className='wrap'>
+//       <form onSubmit={handleSubmit}>
+//         <label>
+//           To:{' '}
+//           <select
+//             value={to}
+//             onChange={e => setTo(e.target.value)}>
+//             <option value="Alice">Alice</option>
+//             <option value="Bob">Bob</option>
+//           </select>
+//         </label>
+//         <textarea
+//           placeholder="Message"
+//           value={message}
+//           onChange={e => setMessage(e.target.value)}
+//         />
+//         <button type="submit">Send</button>
+//       </form>
+//       </div>
+//   );
+// }
+
+// #### 퀴즈1 ####
+// 사용자가 구매 버튼을 누를 때마다 보류카운터가 1 씩 증가해야 합니다. 
+// 3초후에는 보류중 카운터가 감소하고 완료 카운터가 증가해야 합니다.
+
+export default function Test2() {
+  const[pending, setPending] = useState(0);
+  const[completed, setCompleted] = useState(0);
+
+  async function handleClick() {
+    setPending(p => p+1);
+    await delay(3000);
+    setPending(pending -1);
+    setCompleted(completed+1);
   }
 
   return (
     <div className='wrap'>
-      <form onSubmit={handleSubmit}>
-        <label>
-          To:{' '}
-          <select
-            value={to}
-            onChange={e => setTo(e.target.value)}>
-            <option value="Alice">Alice</option>
-            <option value="Bob">Bob</option>
-          </select>
-        </label>
-        <textarea
-          placeholder="Message"
-          value={message}
-          onChange={e => setMessage(e.target.value)}
-        />
-        <button type="submit">Send</button>
-      </form>
-      </div>
+      <h3>Pending  :{pending}</h3>
+      <h3>completed : {completed}</h3>
+      <button onClick={handleClick}>Buy</button>
+    </div>
   );
+}
+
+function delay(ms) {
+  return new Promise(resolve => {
+    setTimeout(resolve,ms);
+  });
 }

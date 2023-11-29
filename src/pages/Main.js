@@ -528,6 +528,8 @@ const Main = (props) => {
 				</div>
 				<div className='section'>
 					<h2>일련의 상태 업테이트 대기열에 넣기</h2>
+					<p>상태 변수를 설정하면 다른 렌더링이 대기열에 추가됨, 렌더링을 대기열에 넣기전에 값에 대해 여러 작업을 수행해야 할 수 도 있다. react가 상태를 일괄 업데이트 하는 방법</p>
+					<h3>React 배치 상태 업데이트</h3>
 				</div>
 			</ContentWrap>
 		</div>
