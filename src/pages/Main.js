@@ -538,7 +538,39 @@ const Main = (props) => {
 				</div>
 				<div className='section'>
 					<h2>상태의 객체 업데이트</h2>
-
+					<p className='dot'>React 상태에 있는 객체를 직접변경해서는 안된다, 대신 객체를 업데이트 하려면 새 객체를 생성하거나 기존 객체의 복사본을 만든 다음 해당 복사본을 사용하도록 상태를 설정 </p>
+					<h3>돌연변이랑 무엇?</h3>
+					<p className='dot'>상태는 변경할 수 없거나 읽기전용</p>
+					<p className='dot bold'>그러나 React 상태의 객체는 기술적으로 변경 가능하지만 숫자, 부울, 문자열처럼 변경 불가능한 것처럼 처리해야 합니다 </p>
+					<p className='dot'>기술적으로는 객체 자체 의 내용을 변경하는 것이 가능합니다 . 이를 돌연변이라고 합니다.</p>
+					<p className='dot'>ex) position.x = 5;</p>
+					<h3>스프레드 구문을 사용하여 객체 복사</h3>
+					<p className='dot'>예를 들어 양식에서 하나의 필드만 업데이트하고 다른 모든 필드에 대해서는 이전 값을 유지하려고 할 수 있습니다 .</p>
+					<h3>중첩된 개체 업데이트</h3>
+					<h3>Immer를 사용하여 간결한 업데이트 로직 작성</h3>
+					<p className='dot'>상태가 깊게 중첩된 경우 평면화를 고려, 상태 구조를 변경하고 싶지 않다면 중첩 스프레드에 대한 지름길을 선호</p>
+					<p className='dot'> Immer를 사용하면 작성하는 코드는 "규칙을 어기고" 객체를 변경하는 것처럼 보입니다.</p>
+					<p className='dot'>1. npm install use-immer 추가</p>
+					<p className='dot'>2. import &#123; useImmer &#125; from 'use-immer';</p>
+					<p className='dot'>원하는 만큼 단일 구성요소에 혼합 useState하고 일치시킬 수 있음</p>
+					<p className='dot'>Immer는 특히 상태에 중첩이 있고 객체를 복사하면 반복적인 코드가 발생하는 경우 업데이터 핸들러를 간결하게 유지하는 좋은 방법이다.</p>
+					<h3>요약</h3>
+					<p className='dot'>React의 모든 상태를 불변으로 취급</p>
+					<p className='dot'>상태에 개체를 저장할 때 해당 개체를 변경하면 렌더링이 트리거되지 않으며 이전 렌더링 "스냅샷"의 상태가 변경된다</p>
+					<p className='dot'>객체를 변경하는 대신 새버전을 만들고 상태를 설정하여 다시 렌더링을 시작</p>
+					<p className='dot'>객체 확산 구문을 사용하여 &#123;...Object,somethig: 'newValue'&#125;객체의 복사본을 생성할 수 있음</p>
+					<p className='dot'>Spread구문은 얖다. 한 수준 깊이만 복사한다.</p>
+					<p className='dot'>중첩된 개체를 업데이트하려면 업데이트하는 위치부터 복사본을 만들어야 한다</p>
+					<p className='dot'>반복적인 코드 복사를 줄이려면 Immer 을 사용</p>
+				</div>
+				<div className='section'>
+					<h2>상태의 배열 업데이트</h2>
+					<h3>요약</h3>
+					<p>배열을 상태로 설정할 수는 있지만 변경할 수는 없습니다.</p>
+					<p>배열을 변경하는 대신 새버전을 만들고 상태를 업데이트하세요.</p>
+					<p>배열 확산 구문을 사용하여 새 항목이 포함된 배열을 만들 수 있습니다.</p>
+					<p>filter() 및 map()를 사용하여 필터링 되거나 변환된 항목이 포함된 새 배열을 생성할 수 있습니다.</p>
+					<p>Immer를 사용하여 코드를 간결하게 유지할 수 있습니다.</p>
 				</div>
 			</ContentWrap>
 		</div>
