@@ -68,22 +68,61 @@ export default function Eng() {
                     <td>famous</td>
                 </tr>
                 <tr>
-                    <td>black</td>
-                    <td>blue</td>
-                    <td>yello</td>
-                    <td>red</td>
-                    <td>white</td>
-                    <td>orange</td>
-                    <td>gray</td>
+                    <td>hi/hello</td>
+                    <td>morning</td>
+                    <td>afternoon</td>
+                    <td>eveing</td>
+                    <td>tomorrow</td>
+                    <td>week</td>
+                    <td>every day</td>
                 </tr>
                 <tr>
-                    <td>black</td>
-                    <td>blue</td>
-                    <td>yello</td>
-                    <td>red</td>
-                    <td>white</td>
-                    <td>orange</td>
-                    <td>gray</td>
+                    <td>car</td>
+                    <td>phone</td>
+                    <td>computer</td>
+                    <td>tv</td>
+                    <td>wallet</td>
+                    <td>chair</td>
+                    <td>coat</td>                    
+                </tr>
+                <tr>
+                    <td>This is</td>
+                    <td>That is</td>
+                    <td>I am</td>
+                    <td>You are</td>
+                    <td>not</td>
+                    <td>I am OK! and you?</td>
+                    <td>I am Good, thanks.</td>
+                </tr>
+                <tr>
+                    <td>yes</td>
+                    <td>no</td>
+                    <td>play</td>
+                    <td>cat</td>
+                    <td>dog</td>
+                    <td>big</td>
+                    <td>small</td>
+                </tr>
+                <tr>
+                    <td>smart</td>
+                    <td>beautiful</td>
+                    <td>like</td>
+                    <td>favorite</td>
+                    <td>video games</td>
+                    <td>flew</td>
+                    <td>fly</td>
+                </tr>
+                <tr>
+                    <td>book</td>
+                    <td>pen</td>
+                    <td>cards</td>
+                    <td>soccer</td>
+                    <td>baseball</td>
+                    <td>basketball</td>
+                    <td>chess</td>
+                </tr>
+                <tr>
+                    <td>new</td>
                 </tr>
             </tbody>
         </table>
