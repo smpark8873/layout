@@ -106,6 +106,7 @@ function Header(props) {
                     <li><NavLink to="/Accordion">Accordion</NavLink></li>
                     <li><NavLink to="/Ui">Ui</NavLink></li>
                     <li><NavLink to="/Test">Test</NavLink></li>
+                    <li><NavLink to="/Eng">Eng</NavLink></li>
                 </ul>
             </Nav>
         </HeaderWrap>

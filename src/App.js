@@ -11,6 +11,7 @@ import Accordion from './pages/Accordion';
 import Ui from './pages/Ui';
 import Slide from './pages/Slide';
 import Test from './pages/Test';
+import Eng from './pages/Eng';
 // import Product from './pages/Product';
 import NotFound from './pages/NotFound';
 import './scss/common.scss';
@@ -31,6 +32,7 @@ const App = () => {
               <Route path="/Accordion" element={<Accordion />}></Route>
               <Route path="/Ui" element={<Ui />}></Route>
               <Route path="/Test" element={<Test />}></Route>
+              <Route path="/Eng" element={<Eng />}></Route>
               {/* <Route path="/product/:productId" element={<Product />}></Route> */}
               {/* 엘리먼트의 상단에 위치하는 라우트들의 규칙을 모두 확인하고, 일치하는 라우트가 없다면 이 라우트가 화면에 나타나게 됩니다. */}
               <Route path="*" element={<NotFound />}></Route>
