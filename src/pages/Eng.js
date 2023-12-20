@@ -123,6 +123,7 @@ export default function Eng() {
                 </tr>
                 <tr>
                     <td>new</td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
