@@ -12,6 +12,7 @@ import Ui from './pages/Ui';
 import Slide from './pages/Slide';
 import Test from './pages/Test';
 import Eng from './pages/Eng';
+import Interview from './pages/Interview';
 // import Product from './pages/Product';
 import NotFound from './pages/NotFound';
 import './scss/common.scss';
@@ -23,6 +24,7 @@ const App = () => {
             <Header />                        
             <Routes>
               <Route path="/" element={<Main />}></Route>
+              <Route path="/Interview" element={<Interview />}></Route>
               <Route path="/Slide" element={<Slide />}></Route>
               <Route path="/Intro" element={<Intro />}></Route>
               <Route path="/Business" element={<Business />}></Route>

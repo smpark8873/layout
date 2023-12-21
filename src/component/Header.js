@@ -43,10 +43,10 @@ const Nav = styled.div`
             position: relative;
             > a {
                 display: block;
-                padding: 0 30px;
+                padding: 0 15px;
                 color: #fff;
                 line-height: 70px; 
-                font-size: 20px;
+                font-size: 16px;
                 text-decoration: 0;               
                 &.active {
                     font-weight: bold;
@@ -90,6 +90,7 @@ function Header(props) {
             <h1><NavLink to="/">LOGO</NavLink></h1>            
             <Nav>
                 <ul>                        
+                    <li><NavLink to="/Interview">Interview</NavLink></li>
                     <li><NavLink to="/Slide">Slide</NavLink></li>
                     <li>
                         <NavLink to="/Intro">ReactPlayer</NavLink>

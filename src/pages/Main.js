@@ -227,7 +227,7 @@ const Main = (props) => {
 						<h4>3단계 : 마크업 추가</h4>
 						<p className='dot'>컴포넌트는 태그를 반환합니다. HTML처럼 작성되지만 실제로 내부적으로는 JavaScript입니다. 이 구문을 <strong className='red'>JSX</strong>라고 합니다.</p>
 						<p className='dot'>반환문(return)은 한줄에 모두 작성할 수도 있다.</p>
-						<p className='dot bold'>여러줄 일 경우 반드시 한쌍의 괄호로 묶어야 한다. <span className='red'>괄호가 없으면 다음 줄의 모든 코드는 return 무시됩니다 !</span></p>
+						<p className='dot bold'>여러줄 일 경우 반드시 한쌍의 괄호로 묶어야 한다. <span className='red'>괄호가 없으면 return 다음 줄의 모든 코드는 무시됩니다 !</span></p>
 					</div>
 
 					<h3>Component 사용</h3>

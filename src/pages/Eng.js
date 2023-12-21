@@ -123,6 +123,65 @@ export default function Eng() {
                 </tr>
                 <tr>
                     <td>new</td>
+                    <td>very</td>
+                    <td>often</td>
+                    <td>too</td>
+                    <td>milk</td>
+                    <td>juice</td>
+                    <td>delicious</td>
+                </tr>
+                <tr>
+                    <td>good bye</td>
+                    <td>cafe</td>
+                    <td>resturant</td>
+                    <td>soup</td>
+                    <td>rice</td>
+                    <td>from</td>
+                    <td>hometown</td>
+                </tr>
+                <tr>
+                    <td>country</td>
+                    <td>america</td>
+                    <td>south korea</td>
+                    <td>japan</td>
+                    <td>australija</td>
+                    <td>canada</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td></td>
                 </tr>
             </tbody>
