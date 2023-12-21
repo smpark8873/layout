@@ -108,67 +108,142 @@ export default function Interview() {
             <li>
                 <p className='question'>6. 각종 태그 문제</p>
                 <div className='answer'>
-                <strong>+ ul, ol의 차이는?</strong><br />
-                <strong>+ dl dt dd는?</strong><br />
-                <strong>+ strong, em, b 차이는?</strong><br />
-                <strong>+ figure태그 설명?</strong><br />
+                    <strong>+ ul, ol의 차이는?</strong><br />
+                    'ol' 태그는 순서가 있는 리스트를 표현하는 태그이며, <br />
+                    'ul' 태그는 순서가 없는 리스트를 표현할 때 사용하는 태그<br /><br />
+
+                    <strong>+ dl dt dd는?</strong><br />
+                    dl은 Description-List, - 용어를 설명하는 목록<br />
+                    dt는 Description-Term, - 정의되는 용어의 제목<br />
+                    dd는 Description-Description - 용어 설명<br /><br />
+
+                    <strong>+ strong, em, b 차이는?</strong><br />
+                    strong : 단순 강조보다 더 중요한 텍스트에 사용, 굵은 글씨로 표시<br />
+                    em : 태그가 강조하고 싶은 텍스트, 이탤릭체<br />
+                    b : 글자를 굵게 표시할 때 쓰는 태그, 의미 없는 물리적 태그<br /><br />
+
+                    <strong>+ figure태그 설명?</strong><br />
+                    figure 태그는 삽화나 다이어그램, 사진 등과 같이 문서의 주요 흐름과는 독립적인 콘텐츠를 정의할 때 사용합니다.<br />
+                    요소의 콘텐츠는 문서의 내용과는 연관성을 가지지만, 해당 콘텐츠의 위치가 문서의 주요 흐름과는 독립적이어서 제거해도 문서의 흐름에 영향을 주어서는 안 됩니다.
                 </div>
             </li>
             <li>
                 <p className='question'>7. CSS 전처리기란?</p>
                 <div className='answer'>
+                    CSS 전처리기는 전처리기가 가진 특별한 syntax으로 CSS를 생성하도록 하는 프로그램입니다.
+                    <strong>왜 전처리기를 사용해야 하나</strong><br />
+                    측면에서 유지보수성과 동일한 스타일을 적용해야하는 대상을 보다 쉽게 관리할 수 있기 때문<br />
+                    너무 큰 CSS파일을 수정하기에 해당하는 위치를 찾아가기가 어렵기 때문<br /><br />
+
+                    <strong>전처리기 종류</strong><br />
+                    CSS 전처리기에는 다양한 모듈이 존재하는데 가장 많이 사용되는 전처리기에는 Sass, Less, Stylus 3가지가 있다. <br /> 
+                    postCss : `PostCSS는 JS 플러그인을 통해 스타일을 변형하는 도구이다.`<br /><br />
+
                     <strong>+ sass, scss, portcss, less 등 사용경험은?</strong>
                 </div>
             </li>
             <li>
                 <p className='question'>8. MDN 사이트를 아는가? </p>
                 <div className='answer'>
-                    DTD
+                    MDN 이란 Mozilla Developer Network 의 약자입니다. 모질라 개발자들의 네트워크를 의미합니다. <br />
+                    하지만, 모질라 개발자만이 아닌 웹 기술과 웹을 더 강력하게 만들어주는 소프트웨어를 배우기 위해 끊임없이 발전하는 학습 플랫폼입니다.<br /><br />
+                    <strong>MDN에서 다루고 있는 주제</strong> <br />
+                    CSS, HTML, JavaScript 와 같은 웹 표준 <br />
+                    열린 Web을 위한 애플리케이션 개발<br />
+                    Firefox 부가 기능 개발 <br /><br />
+                    <strong>목표</strong>는 열린 웹에 대한 모든 것을 문서로 제공하는 것입니다. 
                 </div>
             </li>
             <li>
-                <p className='question'>9. Button태그의 Default type은?</p>
+                <p className='question'>9. Button태그의 Default type은?</p>        
+
                 <div className='answer'>
+                    아무런 값도 지정하지 않는다면 Default는 submit이 된다.<br /><br />
+
                     <strong>+ &lt;input type="button"&gt; 과 차이점은?</strong><br />
+                    input은 열린 태그라 자식 요소를 가질 수 없다는 점<br />
+                    button은 자식 태그를 가질 수 있고, CSS에서 가상 선택자로 꾸미는것도 가능하다.
                 </div>
             </li>
             <li>
                 <p className='question'>10. 문장에 취소선을 넣고싶을때 어떤 태그를 사용하는가? </p>
                 <div className='answer'>
+                    text-decoration: line-through;<br /><br />
                     <strong>+ 밑줄 넣는 태그는?</strong><br />
+                    text-decoration: underline;
                 </div>
             </li>
             <li>
                 <p className='question'>11. section 태그와 article 태그의 차이점을 설명해달라</p>
                 <div className='answer'>
-                    DTD
+                    section 태그는 섹션(부분, 구역, 영역) 들을 그룹화 해서 분리하는 역할<br />
+                    article 태그는 문서내에서 그룹화해서 분리하는 역할을 한다.<br /><br />
+                    <strong>section article 차이</strong>
+                    ▷ article은 내용이 독립적이다.<br />
+                    article 태그는 section과 다르게 독립적으로 존재할 수 있으며 재사용 할 수 있다.<br />
+                    즉 article이 좀 더 구체적이다.<br />
+                    주로 블로그글, 포럼, 뉴스 기사 등을 article로 묶음<br /><br />
+
+                    ▷ section은 주제별로 구분한 그룹이다.<br />
+                    논리적으로 관계있는 요소 또는 문서를 분리할 때 사용한다.<br />
+                    다른 주제의 문서를 구분 짓기위해 사용 (주제별 영역들을 그룹화)<br />
+                    ※ 논리적인 관계가 없는 요소들을 그룹화 할 경우에는 div를 사용한다.
                 </div>
             </li>
             <li>
                 <p className='question'>12. cdn이란? </p>
                 <div className='answer'>
-                    <strong>+ cdn방식이 빠른가? 직접로드가 빠른가? 혹은 케바케?</strong><br />
-                    <strong>- https://beop07.tistory.com/68</strong><br />
+                    콘텐츠 전송 네트워크(CDN)는 데이터 사용량이 많은 애플리케이션의 웹 페이지 로드 속도를 높이는 상호 연결된 서버 네트워크입니다<br /><br />
 
- 
+                    <strong>+ cdn방식이 빠른가? 직접로드가 빠른가? 혹은 케바케?</strong><br />
+                    위의 CDN에 대하여 설명한 것을 보면 무조건 CDN방식이 효율적이라고 생각할 수 있다.<br />
+                    맞다. CDN 방식이 효율적이다.<br />
+                    하지만 무조건 100% CDN 방식을 사용하라고 권할 수는 없다.<br />
+                    CDN Server는 확실히 성능을 향상시킬 수 있지만 그건 CDN Server의 성능이 바춰줘야한다.<br />
+                    성능도 떨어지고, 위의 그림에서 보다시피  CDN Node들이 많이 보유되지 않는다면 부정적인 결과를 초래할 수 있다.<br />
+                    부정적인 결과로 최악의 경우는 SPOF(단일 장애점)이 초래될 수 있다.<br />
+                    단일 장애점이란 한군데가 중단되면 전체 시스템이 중단되버리는 현상이다.<br />
+                    그렇기에 신뢰성이 높아야하는 프로젝트라면 특히 신경써야하는 부분이다.
                 </div>
             </li>
             <li>
                 <p className='question'>13. 가상요소와 가상클래스에 대해서 설명해달라 </p>
                 <div className='answer'>
+                    <strong>가상요소 </strong><br />
+                    실제로 존재하지 않는 가상의 요소를 만들어 스타일을 주는 것을 말한다. <br />
+                    보통 콜론(:)을 사용하지만 가상 클래스와의 구분을 하기 위해 이중콜론(::)의 사용을 권장하고 있다.<br />
+                    ex) ::before, ::after, ::first-letter , ::first-line
+                    <br /><br />
+                    <strong>가상클래스 </strong><br />
+                    먼저 가상 클래스란 실제로 존재하는 요소에 특정 이벤트나 환경에 맞춰 가상으로 클래스를 줘서 css로 제어하는 것을 말한다.<br />
+                    ex) :active, :hover, :checked, :disabled 등등<br /><br />
+
                     <strong>+ 가상요소 : 한개와 :: 두개의 차이는?</strong><br />
+                    이중 콜론(::)은 ie9 이상 부터 지원한다.
                 </div>
             </li>
             <li>
                 <p className='question'>14. css 적용 우선순위를 말해달라</p>
                 <div className='answer'>
-                    DTD
+                    1)속성 값 뒤에 !important 를 붙인 속성<br />
+                    2) HTML에서 style을 직접 지정한 속성<br />
+                    3) #id 로 지정한 속성<br />
+                    4) .클래스, :추상클래스 로 지정한 속성<br />
+                    5) 태그이름 으로 지정한 속성<br />
+                    6) 상위 객체에 의해 상속된 속성<br /><br />
+                    같은 우선 순위에 있는 경우,<br /> 부모-자식 관계가 많은 경우가 우선되며,<br /> 모든 설정이 같은 경우 나중에 선언한 것이 우선되어 적용됩니다.
                 </div>
             </li>
             <li>
                 <p className='question'>15. 바닐라JS란?</p>
                 <div className='answer'>
+                    바닐라 자바스크립트(Vanilla JS)란 프레임워크 또는 라이브러리가 적용되지 않은 순수한 자바스크립트를 뜻한다.<br /><br />
+
                     <strong>+ 장점, 단점, 사용경험</strong><br />
+                    단점 : 일단 동일한 기능을 사용하기 위해서는 코드가 좀 더 길고 복잡할 수 있는 단점<br />
+                    장점 : 순수 자바스크립트는 불필요한 코드를 완전히 배제해 필요한 기능만 성능상 가장 우수하게 구현할 수 있겠죠.<br />
+                    사용경험 : 
+                
                 </div>
             </li>
             <li>
@@ -180,20 +255,46 @@ export default function Interview() {
             <li>
                 <p className='question'>17. Plugin이란?</p>
                 <div className='answer'>
+                    Query는 2006년 미국의 존 레식(John Resig)이 뉴욕시 바캠프(Barcamp)에서 처음 소개한 ‘자바 스크립트 라이브러리’입니다. 
+                    코드가 브라우저의 영향을 받아 작동하지 못하는 문제를 해결하기 위해 개발되었는데요.<br /><br />
                     <strong>+ 무엇을 사용해보았나?</strong><br />
+
                     <strong>+ 장점, 단점</strong><br />
+                    1. 장점<br />
+                    - 멀티 브라우저 지원<br />
+                    - 코드가 단순하여 쉽게 사용 가능<br />
+                    - 서버 사이드 코드와 클라이언트 사이드 코드를 효과적으로 분리작업, 분업작업이 가능<br />
+                    - Ajax를 사용하고, 클라이언트 객체를 통해 작업하여 페이지가 가볍고 빠름<br />
+                    - 오픈 소스이므로 타 개발자들의 소스를 분석 및 플러그인 형태로 붙여넣는 게 쉬움<br />
+                    - 구조적인 코딩이 가능하여 클라이언트용 RIA 컨트롤을 만들기가 용이<br />
+                    2. 단점<br />
+                    - 디버깅, 에러 핸들링이 어려움<br />
+                    - 코드 관리가 어려움<br />
+                    - 업데이트의 문제<br />
+                    - Virtual DOM과 상성이 안 좋음
                 </div>
             </li>
             <li>
                 <p className='question'>18. 크로스브라우징이란?</p>
                 <div className='answer'>
+                    웹 페이지 제작 시에 모든 브라우저에서 깨지지 않고 의도한 대로 올바르게(호환성) 나오게 하는 작업을 말합니다.<br />
                     <strong>+ 경험을 말해달라</strong><br />
                 </div>
             </li>
             <li>
                 <p className='question'>19. CSS 스트라이프란?</p>
                 <div className='answer'>
-                    <strong>+ 장점은? 단점은?</strong><br />
+                 CSS Sprite란 웹사이트의 로딩 속도를 빠르게 하여 UX를 향상시키기 위한 최적화 기법 중의 하나로, 
+                 여러개의 이미지를 하나의 이미지로 합쳐서 관리하는 기술을 의미합니다. 
+                 브라우저는 웹사이트를 로드하는데 필요한 HTML파일, 이미지등의 리소스를 HTTP요청을 통해 가져옵니다.<br /><br />
+                 <strong>+ 장점은? 단점은?</strong><br />
+                 1. 장점<br />
+                    - 서버로의 요청 횟수를 줄여 사이트 로딩 속도를 줄여준다.<br />
+                    - 많은 이미지 파일을 관리하는 대신 하나의 스프라이트 이미지 파일만 관리하면 된다.<br />
+                 2. 단점 <br />
+                  - 이미지 개수가 늘어남에 따라 스프라이트 자체의 용량이 커질 수 있다.<br />
+                  - 일부 이미지, 로고의 수정이 필요한 경우 (ex.덮어쓰기도 안될 때) 유지 보수가 까다롭다..<br />
+                   그렇기 때문에 웬만하면 수정이 안될 것 같은 단순한 이모티콘이나 로고의 경우에 자주 쓰인다.
                 </div>
             </li>
             <li>
