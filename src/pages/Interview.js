@@ -10,7 +10,7 @@ const View = styled.div`
         li { 
             padding: 20px 0;
             border-top: 1px solid #ddd;
-            color: #333;
+            color: #555;
             line-height: 24px;
             font-size: 15px;
             &:first-child {
@@ -19,6 +19,10 @@ const View = styled.div`
             .question {
                 margin-bottom: 10px;
                 font-weight: bold;
+                color: #000;               
+            }
+            strong {
+                color: #000;
             }
         }
      }
@@ -80,13 +84,7 @@ export default function Interview() {
                     API 문서에는 개발자가 이러한 요청과 응답을 구성하는 방법에 대한 정보가 들어 있습니다.
                     API는 정의 및 프로토콜 집합을 사용하여 두 소프트웨어 구성 요소가 서로 통신할 수 있게 하는 메커니즘입니다. 
                 </div>
-            </li>
-            <li>
-                <p className='question'>d </p>
-                <div className='answer'>
-                    DTD
-                </div>
-            </li>
+            </li>           
             <li>
                 <p className='question'>5. float를 clear하는 방법 대표적으로 2가지만 말해달라. </p>
                 <div className='answer'>
@@ -130,12 +128,12 @@ export default function Interview() {
             <li>
                 <p className='question'>7. CSS 전처리기란?</p>
                 <div className='answer'>
-                    CSS 전처리기는 전처리기가 가진 특별한 syntax으로 CSS를 생성하도록 하는 프로그램입니다.
-                    <strong>왜 전처리기를 사용해야 하나</strong><br />
+                    CSS 전처리기는 전처리기가 가진 특별한 syntax으로 CSS를 생성하도록 하는 프로그램입니다.<br /><br />
+                    <strong>+ 왜 전처리기를 사용해야 하나</strong><br />
                     측면에서 유지보수성과 동일한 스타일을 적용해야하는 대상을 보다 쉽게 관리할 수 있기 때문<br />
                     너무 큰 CSS파일을 수정하기에 해당하는 위치를 찾아가기가 어렵기 때문<br /><br />
 
-                    <strong>전처리기 종류</strong><br />
+                    <strong>+ 전처리기 종류</strong><br />
                     CSS 전처리기에는 다양한 모듈이 존재하는데 가장 많이 사용되는 전처리기에는 Sass, Less, Stylus 3가지가 있다. <br /> 
                     postCss : `PostCSS는 JS 플러그인을 통해 스타일을 변형하는 도구이다.`<br /><br />
 
@@ -147,7 +145,7 @@ export default function Interview() {
                 <div className='answer'>
                     MDN 이란 Mozilla Developer Network 의 약자입니다. 모질라 개발자들의 네트워크를 의미합니다. <br />
                     하지만, 모질라 개발자만이 아닌 웹 기술과 웹을 더 강력하게 만들어주는 소프트웨어를 배우기 위해 끊임없이 발전하는 학습 플랫폼입니다.<br /><br />
-                    <strong>MDN에서 다루고 있는 주제</strong> <br />
+                    <strong>+ MDN에서 다루고 있는 주제</strong> <br />
                     CSS, HTML, JavaScript 와 같은 웹 표준 <br />
                     열린 Web을 위한 애플리케이션 개발<br />
                     Firefox 부가 기능 개발 <br /><br />
@@ -178,7 +176,7 @@ export default function Interview() {
                 <div className='answer'>
                     section 태그는 섹션(부분, 구역, 영역) 들을 그룹화 해서 분리하는 역할<br />
                     article 태그는 문서내에서 그룹화해서 분리하는 역할을 한다.<br /><br />
-                    <strong>section article 차이</strong>
+                    <strong>+ section article 차이</strong><br />
                     ▷ article은 내용이 독립적이다.<br />
                     article 태그는 section과 다르게 독립적으로 존재할 수 있으며 재사용 할 수 있다.<br />
                     즉 article이 좀 더 구체적이다.<br />
