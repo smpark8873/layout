@@ -32,7 +32,7 @@ const View = styled.div`
 export default function Interview() {
   return (
     <View>
-        <p>출처 : <a href="https://beop07.tistory.com/m/33" target='_blank'>https://beop07.tistory.com/m/33</a></p>
+        <p>출처 : <a href="https://beop07.tistory.com/m/33" target='_blank' rel='noreferrer'>https://beop07.tistory.com/m/33</a></p>
        <ul className='list'>
             <li>
                 <p className='question'>1. Doctype에 대해서 아시는대로 설명하라</p>
@@ -207,12 +207,12 @@ export default function Interview() {
             <li>
                 <p className='question'>13. 가상요소와 가상클래스에 대해서 설명해달라 </p>
                 <div className='answer'>
-                    <strong>가상요소 </strong><br />
+                    <strong>+ 가상요소 </strong><br />
                     실제로 존재하지 않는 가상의 요소를 만들어 스타일을 주는 것을 말한다. <br />
                     보통 콜론(:)을 사용하지만 가상 클래스와의 구분을 하기 위해 이중콜론(::)의 사용을 권장하고 있다.<br />
                     ex) ::before, ::after, ::first-letter , ::first-line
                     <br /><br />
-                    <strong>가상클래스 </strong><br />
+                    <strong>+ 가상클래스 </strong><br />
                     먼저 가상 클래스란 실제로 존재하는 요소에 특정 이벤트나 환경에 맞춰 가상으로 클래스를 줘서 css로 제어하는 것을 말한다.<br />
                     ex) :active, :hover, :checked, :disabled 등등<br /><br />
 
@@ -298,14 +298,72 @@ export default function Interview() {
             <li>
                 <p className='question'>20. script를 로드할때 defer, async는 각각 무엇을 나타내는가? </p>
                 <div className='answer'>
-                    DTD
+                     <strong>* async와 defer 차이점 명확하게 이해하기</strong><br /><br />
+                    <strong>defer</strong><br />
+                    - defer 방식은 스크립트 로딩이 완료돼도 무조건 html parsing이 끝난 후 스크립트를 실행시킨다<br />
+                    - defer 방식은 먼저 작성된 스크립트가 마지막에 작성된 스크립트보다 늦게 로딩 되어도 먼저 실행시킨다 (실행 순서를 지킴)<br />
+                    - defer방식은 DOM 전체가 필요한 스크립트나 실행 순서가 중요한 경우에 사용하는 것이 적합하다<br /><br />
+                     
+                    <strong>async</strong><br />
+                    - async 방식은 스크립트 로딩이 완료되면 html parsing이 끝나지 않아도, 잠시 멈춰놓고 일단 스크립트를 실행시킨다<br />
+                    - async 방식은 마지막으로 선언된 스크립트 파일이 제일 먼저 선언된 스크립트 파일보다 먼저 다운로드 되면 순서에 상관없이 먼저 실행되고, 
+                    이렇게 먼저 로드 된 스크립트가 먼저 실행되는 걸 'load-first order'라고 부른다<br />
+                    - 즉 async는 '마이웨이'를 생각하면 된다.<br />
+                    - 그래서 async 방식은 방문자 수 카운터, 광고 관련 스크립트처럼 각 독립적인 역할을 하는 서드파티 스크립트를 
+                    현재 개발 중인 스크립트에 통합하려 할 때 아주 유용하다 (async 스크립트는 개발 중인 스크립트에 의존하지 않고, 그 반대도 마찬가지이기 때문)<br /><br />
+                   
+                    <strong>&lt;script defer src=""&gt;&lt;script&gt;</strong><br />
+    
+                    이 방법은 외부 script를 다운로드하면서 html parsing을 시작하는데 (비동기처리로 동시에 진행됨)<br />
+                    이 단계에선 fetching 만 하고 (일단 실행시키기 직전의 준비만 마쳐놓고)<br />
+                    html 다운로드가 모두 끝나서야 미리 받아놨던 외부 script 파일을 실행한다.<br />
+                    즉 스크립트를 다운로드하는 도중에도 html parsing이 멈추지 않고 계속 진행된다. <br /><br />
+                
+                    외부 스크립트 파일을 여러 개 작성했다면<br />
+                    마지막에 작성된 스크립트 파일의 용량이 제일 작아 먼저 다운로드가 되어도<br />
+                    마지막에 작성되었기 때문에 제일 마지막에 실행된다 (script의 실행순서를 정할 수 있다)<br /><br />
+                
+                    defer 방식의 단점은<br />
+                    스크립트가 실행되기 전에 페이지가 화면에 출력된다는 점을 유의해야 한다.<br />
+                    만약 스크립트가 로딩 지연이 될 때 영향을 받는 영역에는 로딩 인디케이터가 존재해야 하며<br />
+                    관련 버튼도 사용 불가 처리를 해줘야 사용자에게 혼란을 주지 않을 수 있다.<br />
+                    + 참고로 defer 속성은 외부 스크립트에만 유효하여 src 속성을 넣지 않으면 defer 은 무시된다. (내부 script 사용 불가)<br /><br />
+
+                    <strong>&lt;script async src=""&gt;&lt;script&gt;</strong><br />
+                    위의 defer와는 다르게 async 속성은 페이지와 매우 독립적으로 동작하는 특징을 가진다.<br />
+                    이 방식은 웹브라우저에서 쭉 읽다가 script를 만나면 우선 병렬적으로 실행을 시켜놓은 후 (이것도 비동기처리)<br />
+                    기다리지 않고 그다음 코드들을 쭉 해석한다.<br />
+                    그러다 script 로딩이 완료되면 html parsing을 일단 멈추고<br />
+                    로딩이 완료된 자바스크립트를 실행시킨 후 다시 html parsing을 시작한다.<br /><br />
+                
+                    이로써 defer방식처럼 자바스크립트 다운로드하는 시간을 절약할 수 있다<br /><br />
+                    
+                    하지만 자바스크립트가 html 파싱이 완료되기 전에 실행이 되기 때문에 만약 자바스크립트 파일에서 쿼리셀렉터로 DOM 요소를 조작한다면, 
+                    조작하려는 시점에 우리가 원하는 html 요소가 아직 정의되어 있지 않을 수 있다 (위험 가능성 존재)<br />
+                    또한 자바스크립트를 실행하기 위한 html 파싱을 잠시 멈추기 때문에 웹페이지 로딩 속도가 살짝 느리다는 느낌을 받을 수도 있고,<br />
+                    스크립트가 (작성한 순서에 상관없이) 먼저 다운로드 되는 순서대로 실행을 하기 때문에 스크립트 실행 순서에 의존적이라면 문제가 될 수 있음.<br />
+                     (a-b-c 순서로 실행되어야 하는데 b가 먼저 다운되면 b-a-c로 로딩되어버림)                    
                 </div>
             </li>
             <li>
                 <p className='question'>21. AJAX란?</p>
                 <div className='answer'>
+                    비동기 자바스크립트와 XML(Asynchronous Javascript And XML)을 말한다.<br />
+                    Ajax는 서버와 통신하기 위해 XMLHttpRequest 객체를 사용하며 XML 뿐만 아니라 HTML, JSON, 일반 텍스트 형식 등을 포함한 다양한 포맷을 주고 받을 수 있다.<br />
+                    Ajax의 가장 큰 특징과 핵심적인 부분은 웹 페이지 전체를 다시 로딩하지 않고 웹 페이지의 필요한 일부분만을 갱신할 수 있게 해주는 것이다.<br /><br />
+
+                    <strong>+ 장점</strong><br />
+                    필요한 데이터만 가지고 오는 것으로 웹 페이지를 새로고침 하는 것보다 속도가 향상된다<br />
+                    서버의 처리가 완료될 때 까지 기다리지 않고 처리 가능하다  (비동기적인 특징)<br />    
+                    서버에서 데이터만 전송하면 되어 전체적인 코드의 양이 줄어든다<br /><br />
                     <strong>+ 사용 경험</strong><br />
+                    없음<br /><br />
                     <strong>+ 비동기 통신이란?</strong><br />
+                    비동기(Async) 통신은 동기(Sync)의 반댓말로, 웹페이지를 새로고침하지 않고도 데이터를 불러오는 방식이다.<br />
+                    전체 페이지를 다시 로딩하지 않고 필요한 부분만 업데이트하기 때문에 웹페이지의 속도와 성능을 향상시킬 수 있다.<br />
+                    서버와의 통신량이 줄어들고, 자원과 시간을 절약할 수 있다.화면이 깜빡거리거나 멈추지 않고 부드럽게 작동하기 때문에 사용자 경험을 개선시킬 수 있다.
+                    요청과 응답이 동시에 일어나지 않아도 되기 때문에 요청을 보낸 후에 다른 작업을 할 수 있다.
+
                 </div>
             </li>
             <li>
@@ -317,61 +375,140 @@ export default function Interview() {
             <li>
                 <p className='question'>23. 제이쿼리의 attr(), prop()의 차이는?</p>
                 <div className='answer'>
-                - https://beop07.tistory.com/70
+                    <strong>attr</strong><br />
+                    어트리뷰트(attribute)는 HTML 태그에 지정된 속성을 의미한다.<br />
+                    제이쿼리 attr() 함수는 해당 attribute 값을 가져오거나 설정할때 사용된다.
+                    
+                    <br /><br />
+                    <strong>prop</strong><br />
+                    프로퍼티(property)는 HTML 요소의 JavaScript 객체 속성을 나타낸다.<br />
+                    프로퍼티 이벤트 프로퍼티, 엘리먼트 프로퍼티, 노드 프로퍼티 등이 있는데<br />
+                    가장 이해하기 쉬운 예시로는 엘리먼트 프로퍼티의 input radio, checkbox의 checked를 예시로 들겠다.<br />
+                    해당 checkbox에 checked가 true인지 false인지 크롬 DevTools(f12)에서 Elements에서 노출되지 않는다는 차이가 있다.<br />
+                    disabled, checked, selected등도 해당이 된다.<br />
+                    제이쿼리 prop()은 DOM 요소의 프로퍼티 값을 가져오거나 설정하는데 쓰인다.<br />
+                    - https://beop07.tistory.com/70
                 </div>
             </li>
             <li>
                 <p className='question'>24. 체크박스의 네모버튼을 커스텀으로 수정하고싶다 어떻게 하는가?</p>
                 <div className='answer'>
-                    DTD
+                    &lt;input type="checkbox" id="check1"&gt;<br/>
+                    &lt;label for="check1"&gt;&lt;/label&gt;<br/><br/>
+                    근데 단순하게 style로 바로 input태그를 커스텀할수가 없다.<br/>
+                    이때 사용하는 방법이 바로 lable이다.<br/>
+                    이 라벨을 원하는 디자인으로 css 스타일을 꾸며준다.
                 </div>
             </li>
             <li>
                 <p className='question'>25. 제이쿼리 선택자중 형제노드를 탐색하고 싶다 어떻게 하는가?</p>
                 <div className='answer'>
-                    <strong>+ 부모선택자는? 자식선택자는?</strong><br />
+                    <strong>+ 형제노드?</strong><br />
+                    .prev( [selector] ) : 선택된 요소에 같은 노드 위치에서 선택된 요소에 이전 요소가 selector와 같은 요소를 찾음<br />
+                    .prevAll( [selector] ) : 같은 노드 위치에서 선택된 요소에 이전 요소들 중에 selector에 해당하는 요소만 찾음 <br />
+                    .next( [selector] ) : 같은 노드 위치에서 선택된 요소에 다음 요소가 selector와 같은 요소를 찾음<br />
+                    .nextAll( [selector] ) : 같은 노드 위치에서 선택된 요소에 다음 요소들 중에 selector에 해당하는 요소만 찾음<br />
+                    .siblings() : 같은 노드 위치에서 선택된 요소를 제외한 나머지 요소를 전부 찾음<br /><br />
+
+                    <strong>+ 부모선택자는?</strong><br />
+                    .parent( [selector] ) : 선택된 요소에 부모 노드 중에 해당되는 요소를 찾음 <br />
+                    .parents( [selector] ) : 선택된 요소에 최상위 부모 노드 중에 해당되는 요소를 찾음<br />
+                    .closest( [selector] ) : 선택된 요소에 부모 노드 요소중에 가장 가까운 요소를 찾음<br /><br />
+
+                    <strong>+ 자식선택자는?</strong><br />
+                    .children( [selector] ) : 선택된 요소에서 자식 노드에 해당하는 요소를 찾음<br />
+                    .find( [selector] ) : 선택된 요소에서 자식 노에 해당하는 요소들 중  매개변수에 해당하는 요소를 찾음
                 </div>
             </li>
             <li>
                 <p className='question'>26. 제이쿼리 선택된 요소의 위치를 알고 싶다 어떻게 하는가? </p>
                 <div className='answer'>
-                    DTD
+                .offset()	선택한 요소 집합의 첫 번째 요소의 위치를 HTML 문서를 기준으로 반환하거나, 선택한 요소의 위치를 인수로 전달받은 값으로 설정한다.<br />
+                .position()	선택한 요소 집합의 첫 번째 요소의 위치를 해당 요소가 웹 페이지에 위치할 때 기준이 되었던 부모 요소를 기준으로 하는 상대 위치를 반환한다.
                 </div>
             </li>
             <li>
                 <p className='question'>27. 제이쿼리 e.preventDefault()란?</p>
                 <div className='answer'>
-                    DTD
+                a 태그나 submit 태그는 누르게 되면 href 를 통해 이동하거나 , 창이 새로고침하여 실행됩니다.<br />
+                    preventDefault 를 통해 이러한 동작을 막아줄 수 있습니다.<br />
+                    주로 사용되는 경우는<br />
+                    1. a 태그를 눌렀을때도 href 링크로 이동하지 않게 할 경우<br />
+                    2. form 안에 submit 역할을 하는 버튼을 눌렀어도 새로 실행하지 않게 하고싶을 경우 (submit은 작동됨)
                 </div>
             </li>
             <li>
                 <p className='question'>28. 전파방지란? </p>
                 <div className='answer'>
-                    DTD
+                    브라우저에서 요소에 대한 event가 발생하면 해당 요소에 할당된 handler가 동작하게 되는데, <br />
+                    이 때 handler가 동작하면서 다음과 같이 Bubbling과 Capturing이 발생하게 됩니다.<br /><br />             
+                    <strong>bubbling</strong>은 특정 요소에서 event가 발생했을 때 상위 요소로 event가 전파되는 것을 의미합니다.<br />
+                    <strong>capturing</strong>은 특정 요소에서 event가 발생했을 때 bubbling과 반대로 하위 요소로 event가 전파되는 것을 의미합니다.<br /><br />
+
+                    <strong>Event.stopPropagation</strong><br />
+                     event.stopPropagation()은 이벤트 전파를 중단시킵니다. 따라서 bubbling 이나 capturing을 막아야하는 경우에 사용합니다.<br /><br />
+
+                    <strong>event.stopImmediatePropagation()</strong><br />
+                    event.stopImmediatePropagation()은 이벤트 전파를 중단시키고 다른 event handler의 동작도 막아줍니다. 따라서 target이 기본 동작을 가지고 있는 경우에 기본 동작만 일어나게 됩니다.<br /><br />
+
+                    <strong>return false</strong><br />
+                    return false는 onclick handler에 사용했을 경우에 대하여 event.preventDefault()를 사용한 것과 같은 동작을 합니다. 따라서 이벤트 전파는 발생하지만 기본 동작은 중단되게 됩니다.
                 </div>
             </li>
             <li>
                 <p className='question'>29. css keyframe을 사용하여 위아래로 움직이는 도형을 만들수 있는가? </p>
                 <div className='answer'>
-                    DTD
+                    <strong>html</strong><br />
+                    &lt;i class="icon fas fa-bomb"&gt;&lt;/i&gt;<br /><br />
+
+                    <strong>css</strong><br />                    
+                        .icon&#123;<br />   
+                        　　　font-size: 5em;<br />   
+                        　　　animation: motion 0.3s /* 속도 */<br />   
+                        　　　linear 0s   /* 처음부터 끝까지 일정 속도로 진행 */<br />   
+                        　　　infinite alternate; /* 무한 반복 */<br />   
+                        &#125;<br />   
+                        @keyframes motion &#123;<br />   
+                        　　　0% &#123;margin-top: 0px;&#125; /* 처음 위치 */<br />   
+                        　　　100% &#123;margin-top: 10px;&#125; /* 마지막 위치 */<br />   
+                        &#125;                  
                 </div>
             </li>
             <li>
                 <p className='question'>30. css로 세모는 어떻게 만드는가?</p>
                 <div className='answer'>
-                    DTD
+                <strong>html</strong><br />
+                &lt;div id = "triangle"&gt;&lt;/div&gt;<br /><br />
+
+                <strong>css</strong><br />    
+                #triangle&#123;<br />  
+                　　　width: 0;<br />  
+                　　　height: 0;<br />  
+                　　　border-bottom: 10px solid red;<br />  
+                　　　border-left: 10px solid transparent;<br />  
+                　　　border-right: 10px solid transparent;<br />  
+                &#125;
                 </div>
             </li>
             <li>
                 <p className='question'>31. 자바스크립트에서 호이스팅이라고 들어보았는가?(프론트영역)</p>
                 <div className='answer'>
-                    DTD
+                    호이스팅은 코드가 실행하기 전 변수선언/함수선언이 해당 스코프의 최상단으로 끌어 올려진 것 같은 현상을 말한다.<br />
+                    자바스크립트 엔진은 코드를 실행하기 전 실행 가능한 코드를 형상화하고 구분하는 과정(*실행 컨텍스트를 위한 과정)을 거친다.<br />
+                    자바스크립트 엔진은 코드를 실행하기 전 실행 컨텍스트를 위한과정에서 모든 선언(var, let, const, function, class)을 스코프에 등록한다.<br />
+                    코드 실행 전 이미 변수선언/함수선언이 저장되어 있기 때문에 선언문보다 참조/호출이 먼저 나와도 오류 없이 동작한다.<br />
+                    (정확히는 var 키워드로 선언한 변수와 함수 선언문일 경우 오류 없이 동작한다. 이는 선언이 파일의 맨 위로 끌어올려진 것 처럼 보이게 한다.)
                 </div>
             </li>
             <li>
                 <p className='question'>32. 자바스크립트 ES6에서 많은 변화가 일어났는데 대표적으로 3가지만 말해달라</p>
                 <div className='answer'>
-                    <strong>- let, var, const 차이는?</strong><br />
+                    1. ES6 이후로 let과 const 키워드의 등장으로 블록 범위가 적용되었습니다.<br />
+                    2. 화살표 함수<br />
+                    3. 클래스 : class 키워드로 자바스크립트에서 객체를 생성할 수 있는 템플릿인 클래스를 선언할 수 있습니다.<br />
+                    <strong>+ let, var, const 차이는?</strong><br />
+
+
                 </div>
             </li>
             <li>
@@ -383,20 +520,35 @@ export default function Interview() {
             <li>
                 <p className='question'>34. css flex에 대해 설명하라</p>
                 <div className='answer'>
-                    DTD
+                    Flex(플렉스)는 Flexible Box, Flexbox라고 부르기도 합니다.<br />
+                    Flex는 레이아웃 배치 전용 기능으로 고안되었습니다. 그래서 앞서서 소개했던 레이아웃을 만들 때 딱히 사용할게 없어서 쓰던 float나 inline-block 등을
+                     이용한 기존 방식보다 훨씬 강력하고 편리한 기능들이 많이 지원됩니다.
                 </div>
             </li>
             <li>
                 <p className='question'>35. 반응형웹이란? 적응형웹이란?</p>
                 <div className='answer'>
-                    <strong>+ 반응형에서 중요한건 무엇이라 생각하는가?</strong><br />
+                반응형 웹 디자인은 감지된 화면 크기에 따라 자동으로 페이지가 재배열되는 유동적인 접근 방식입니다. <br />
+                반면, 적응형 웹 디자인은 브라우저가 주어진 플랫폼에 맞춰 특별히 생성된 레이아웃을 불러오는 웹 디자인 유형입니다.<br /><br />
+
+                <strong>+ 반응형에서 중요한건 무엇이라 생각하는가?</strong><br />
+
                 </div>
             </li>
             <li>
-                <p className='question'>36. meta태그는 무엇인가?</p>
+                <p className='question'>36. meta태그는 무엇인가?</p>               
                 <div className='answer'>
-                    <strong>+ 오픈그래프란(og)?</strong><br />
-                    <strong>+ 모바일에서 손가락으로 확대하는것을 2배까지만 제한하고 싶다 어떻게하는가?</strong><br />
+                    하이퍼텍스트(Hyper text) 생성 언어 HTML 문서의 맨 위쪽에 위치하는 태그(tag)로 HEAD 태그 사이 또는 뒤에 있어도 되지만 반드시 BODY 태그 앞쪽에 위치해야 한다.<br />
+                    브라우저와 검색 엔진을 사용할 수 있도록 웹 문서의 정보를 포함하고 있다​<br />
+                    메타태그(meta tag)는 웹페이지(Web page)의 요약이므로 상당히 중요하다고 할 수 있다.<br /><br />
+                    
+                    <strong>+ 오픈그래프란(og)?</strong><br /><br />
+                    대부분의 콘텐츠는 URL로 공유된다. 이 때, 콘텐츠가 표시되는 방식을 관리하기 위해 오픈 그래프 태그(OG TAG)로 웹사이트를 마크업하여 마케팅 효과를 낼 수 있다.<br />
+                    즉, 해당 콘텐츠의 요약내용이 "SNS에 게시되는데 최적화된 데이터"를 가지고 갈 수 있도록 설정하는 것.
+
+                    <strong>+ 모바일에서 손가락으로 확대하는것을 2배까지만 제한하고 싶다 어떻게하는가?</strong><br /><br />
+                    maximum-scale : 2 (늘릴 수 있는 최대 크기를 지정합니다. 0~10 사이의 값을 가집니다.
+
                 </div>
             </li>
             <li>
@@ -408,7 +560,7 @@ export default function Interview() {
             <li>
                 <p className='question'>38. 현재 국내 브라우저 점유율이 어떤지 파악하고 있는가? (웹에 대한 관심도를 보기위함 https://gs.statcounter.com/ 한국을 참고.)</p>
                 <div className='answer'>
-                    DTD
+                    크롬 62.92프로 / 사파리 19.97 / 엣지 5.5
                 </div>
             </li>
             <li>
