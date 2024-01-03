@@ -30,6 +30,7 @@ export default function Eng() {
         <table>
             <thead>
                 <tr>
+                    <th>1</th>
                     <th>Monday</th>
                     <th>Tuesday</th>
                     <th>Wednesday</th>
@@ -41,6 +42,7 @@ export default function Eng() {
             </thead>
             <tbody>
                 <tr>
+                    <td>2</td>
                     <td>mother</td>
                     <td>father</td>
                     <td>son</td>
@@ -50,6 +52,7 @@ export default function Eng() {
                     <td>sister</td>
                 </tr>
                 <tr>
+                    <td>3</td>
                     <td>black</td>
                     <td>blue</td>
                     <td>yello</td>
@@ -59,6 +62,7 @@ export default function Eng() {
                     <td>gray</td>
                 </tr>
                 <tr>
+                    <td>4</td>
                     <td>teacher</td>
                     <td>doctor</td>
                     <td>nurse</td>
@@ -68,6 +72,7 @@ export default function Eng() {
                     <td>famous</td>
                 </tr>
                 <tr>
+                    <td>5</td>
                     <td>hi/hello</td>
                     <td>morning</td>
                     <td>afternoon</td>
@@ -77,6 +82,7 @@ export default function Eng() {
                     <td>every day</td>
                 </tr>
                 <tr>
+                    <td>6</td>
                     <td>car</td>
                     <td>phone</td>
                     <td>computer</td>
@@ -86,6 +92,7 @@ export default function Eng() {
                     <td>coat</td>                    
                 </tr>
                 <tr>
+                    <td>7</td>
                     <td>This is</td>
                     <td>That is</td>
                     <td>I am</td>
@@ -95,6 +102,7 @@ export default function Eng() {
                     <td>I am Good, thanks.</td>
                 </tr>
                 <tr>
+                    <td>8</td>
                     <td>yes</td>
                     <td>no</td>
                     <td>play</td>
@@ -104,6 +112,7 @@ export default function Eng() {
                     <td>small</td>
                 </tr>
                 <tr>
+                    <td>9</td>
                     <td>smart</td>
                     <td>beautiful</td>
                     <td>like</td>
@@ -113,6 +122,7 @@ export default function Eng() {
                     <td>fly</td>
                 </tr>
                 <tr>
+                    <td>10</td>
                     <td>book</td>
                     <td>pen</td>
                     <td>cards</td>
@@ -122,6 +132,7 @@ export default function Eng() {
                     <td>chess</td>
                 </tr>
                 <tr>
+                    <td>11</td>
                     <td>new</td>
                     <td>very</td>
                     <td>often</td>
@@ -131,6 +142,7 @@ export default function Eng() {
                     <td>delicious</td>
                 </tr>
                 <tr>
+                    <td>12</td>
                     <td>good bye</td>
                     <td>cafe</td>
                     <td>resturant</td>
@@ -140,25 +152,68 @@ export default function Eng() {
                     <td>hometown</td>
                 </tr>
                 <tr>
+                    <td>13</td>
                     <td>country</td>
                     <td>america</td>
                     <td>south korea</td>
                     <td>japan</td>
                     <td>australija</td>
                     <td>canada</td>
+                    <td>los angeles</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>where</td>
+                    <td>how</td>
+                    <td>that</td>
+                    <td>the</td>
+                    <td>a/an</td>
+                    <td>in</td>
+                    <td>go</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>goes</td>
+                    <td>to</td>
+                    <td>cothing</td>
+                    <td>store</td>
+                    <td>mall</td>
+                    <td>shopping</td>
+                    <td>fitting room</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>let's go home</td>
+                    <td>shirt</td>
+                    <td>blouse</td>
+                    <td>dress</td>
+                    <td>pants</td>
+                    <td>sheo</td>
+                    <td>near</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>too</td>
+                    <td>mom</td>
+                    <td>dad</td>
+                    <td>brother</td>
+                    <td>crowded</td>
+                    <td>huge</td>
+                    <td>live</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>here</td>
+                    <td>there</td>
+                    <td>so</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
+                    <td>17</td>
+                    <td>too</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -167,7 +222,8 @@ export default function Eng() {
                     <td></td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td>17</td>
+                    <td>too</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -176,7 +232,8 @@ export default function Eng() {
                     <td></td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td>17</td>
+                    <td>too</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -184,6 +241,67 @@ export default function Eng() {
                     <td></td>
                     <td></td>
                 </tr>
+                <tr>
+                    <td>17</td>
+                    <td>too</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>too</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>too</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>too</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>too</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>too</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
             </tbody>
         </table>
             

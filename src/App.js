@@ -13,6 +13,7 @@ import Slide from './pages/Slide';
 import Test from './pages/Test';
 import Eng from './pages/Eng';
 import Interview from './pages/Interview';
+import Script from './pages/Script';
 // import Product from './pages/Product';
 import NotFound from './pages/NotFound';
 import './scss/common.scss';
@@ -24,6 +25,7 @@ const App = () => {
             <Header />                        
             <Routes>
               <Route path="/" element={<Main />}></Route>
+              <Route path="/Script" element={<Script />}></Route>
               <Route path="/Interview" element={<Interview />}></Route>
               <Route path="/Slide" element={<Slide />}></Route>
               <Route path="/Intro" element={<Intro />}></Route>

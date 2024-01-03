@@ -90,6 +90,7 @@ function Header(props) {
             <h1><NavLink to="/">LOGO</NavLink></h1>            
             <Nav>
                 <ul>                        
+                    <li><NavLink to="/Script">Script</NavLink></li>
                     <li><NavLink to="/Interview">Interview</NavLink></li>
                     <li><NavLink to="/Slide">Slide</NavLink></li>
                     <li>
@@ -101,8 +102,8 @@ function Header(props) {
                         </div>
                     </li>
                     <li><NavLink to="/Business">Animation1</NavLink></li>
-                    <li><NavLink to="/Animation">Animation2</NavLink></li>
-                    <li><NavLink to="/ScrollAnimation">ScrollAnimation</NavLink></li>
+                    {/* <li><NavLink to="/Animation">Animation2</NavLink></li>
+                    <li><NavLink to="/ScrollAnimation">ScrollAnimation</NavLink></li> */}
                     <li><NavLink to="/Layout">Layout</NavLink></li>
                     <li><NavLink to="/Accordion">Accordion</NavLink></li>
                     <li><NavLink to="/Ui">Ui</NavLink></li>
