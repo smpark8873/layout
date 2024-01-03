@@ -507,6 +507,7 @@ export default function Interview() {
                     2. 화살표 함수<br />
                     3. 클래스 : class 키워드로 자바스크립트에서 객체를 생성할 수 있는 템플릿인 클래스를 선언할 수 있습니다.<br />
                     <strong>+ let, var, const 차이는?</strong><br />
+                    
 
 
                 </div>
@@ -514,7 +515,7 @@ export default function Interview() {
             <li>
                 <p className='question'>33. 국내에선 아직 최신 브라우저를 사용하지 않아 ES6에 대해 완벽한 지원이 안되고있다 어떻게하면 좋을까? </p>
                 <div className='answer'>
-                    DTD
+                    
                 </div>
             </li>
             <li>
