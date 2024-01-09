@@ -151,6 +151,28 @@ export default function Script() {
 			<p className='dot'>이름은 대소문자를 구분</p>
 			<p className='dot'>예약어(키워드)는 이름으로 사용할 수 없다.</p>
 			<h3>JS let</h3>
+			<h3>JS const</h3>
+			<p className='dot'>재 할당 할 수 없다</p>
+			<p className='dot'>JavaScript const변수는 선언될 때 값을 할당해야 합니다.</p>
+			<p className='dot'>const값이 변경되어서는 안 된다는 것을 알고 있는 경우에는 항상 변수를 선언하십시오 .</p>
+			&lt;다음을 선언할때 사용&gt;
+			<p className='dot'>새로운 배열</p>
+			<p className='dot'>새로운 객체</p>
+			<p className='dot'>새로운 함수</p>
+			<p className='dot'>새로운 regExp</p>
+			<p className='dot'>상수 배열의 요소를 변경할 수 있다. 하지만 배열을 다시 할당할 수는 없다.</p>
+			<p className='dot'>상수 개체의 속성을 변경할 수 있다. 하지만 객체를 재할당할 수는 없다. </p>
+			<p className='dot'>let는 constInternet Explorer 11 이하에서는 지원되지 않습니다.</p>
+			<h3>자바스크립트 연산자</h3>
+			<p className='dot'>산술 연산자 : + - * ** / % ++ ++</p>
+			<p className='dot'>할당 연산자 : = += -+ *= /+ %= **= </p>
+			<p className='dot'>비교 연산자 : == === != !== &gt; < >= &lt;= ?</> </p>
+			<p className='dot'>문자열 연산자 : 모든 비교 연산자는 문자열에도 사용 할 수 있다. 알페벳 순의로 비교된다.<br />  +문자열을 추가(연결)하는 데에도 사용할 수 있습니다 .<br /> 할당 연산자 +=를 사용하여 문자열을 추가(연결)할 수도 있습니다.</p>
+			<p className='dot'>논리 연산자 : && || !</p>
+			<p className='dot'>비트 연산자 : &, |, ~, ^, &lt;&lt;, &gt;&gt;, &gt;&gt;&gt;</p>
+			<p className='dot'>삼항 연산자 : 조건 ? true = false</p>
+			<p className='dot'>유형 연산자 : typeof , instanceof </p>
+
         </div>
       </div>
     </ContentWrap>
