@@ -121,7 +121,7 @@ export default function Script() {
 			- JavaScript는 여러 공백을 무시합니다. let person = "Hege";<br />
 			- 연산자 주위에 공백을 두는 것이 좋습니다( = + - * / ).let x = y + z;<br />
 			- 최고의 가독성을 위해 프로그래머는 80자를 초과하는 코드 줄을 피하는 경우가 많습니다. JavaScript 문이 한 줄에 맞지 않는 경우 이를 나누는 가장 좋은 위치는 <strong>연산자 다음</strong>입니다.<br />
-			- JavaScript 코드 블록 : JavaScript 문은 중괄호 {...} 안에 코드 블록으로 그룹화될 수 있습니다.
+			- JavaScript 코드 블록 : JavaScript 문은 중괄호 &#123;...&#125; 안에 코드 블록으로 그룹화될 수 있습니다.
 			<h3>JS Syntax</h3>
 			- 자바스크립트 구문 고정값 , 변수값<br />
 			- 고정값 : 자바스크립트 리터럴<br />
@@ -131,7 +131,26 @@ export default function Script() {
 			- var , let, const 키워드 사용<br />
 			- 자바스크립트 연산자 - 산술 연산자 ( + - * /) 를 사용하여 값을 계산합니다 .<br />
 			- 할당 연산자 ( =) 를 사용하여 변수에 값을 할당합니다 .<br />
-			- 자바스크립트 표현식
+			- 자바스크립트 표현식 : 표현식은 값을 계산하는 값, 변수 및 연산자의 조합입니다.<br />
+			- JavaScript 키워드는 수행할 작업을 식별하는 데 사용됩니다.<br />
+			- 이중 슬래시 뒤 //또는 /*및 사이의 코드는 주석*/ 으로 처리<br />
+			- 식별자는 JavaScript 이름입니다. JavaScript 이름은 다음으로 시작해야 합니다. 1. 문자(AZ 또는 az) 2. 달러 기호($) 3. 아니면 밑줄(_)<br />
+			- JavaScript는 대소문자를 구분합니다.lastName및 는 lastname두 개의 다른 변수<br />
+			- vaScript에서는 하이픈을 사용할 수 없습니다. 뺄셈을 위해 예약되어 있습니다. Camel 케이스<br />
+			- JavaScript는 유니코드 문자 집합을 사용합니다.<br />
+			<h3>JS 주석</h3>
+			<p className='dot'>한줄 주석 //</p>
+			<p className='dot'>여러줄 주석(블록주석) /*  ~ */</p>
+			<p className='dot'>한 줄 주석을 사용하는 것이 일반적 / 블록 주석은 공식 문서에 자주 사용</p>
+			<h3>JS 변수</h3>
+			<p className='dot'>변수는 데이터를 저장하는 컨테이너</p>
+			<strong>변수 이름 규칙</strong>
+			<p className='dot'>이름에는 문자, 숫자, 밑줄 달러 기호가 포함될 수 있다.</p>
+			<p className='dot'>이름은 문자로시작해야 한다.</p>
+			<p className='dot'>이름은 $ 및 _로 시작 할 수도 있다.</p>
+			<p className='dot'>이름은 대소문자를 구분</p>
+			<p className='dot'>예약어(키워드)는 이름으로 사용할 수 없다.</p>
+			<h3>JS let</h3>
         </div>
       </div>
     </ContentWrap>
