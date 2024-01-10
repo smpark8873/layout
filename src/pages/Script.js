@@ -163,7 +163,7 @@ export default function Script() {
 			<p className='dot'>상수 배열의 요소를 변경할 수 있다. 하지만 배열을 다시 할당할 수는 없다.</p>
 			<p className='dot'>상수 개체의 속성을 변경할 수 있다. 하지만 객체를 재할당할 수는 없다. </p>
 			<p className='dot'>let는 constInternet Explorer 11 이하에서는 지원되지 않습니다.</p>
-			<h3>자바스크립트 연산자</h3>
+			<h3>JS 연산자</h3>
 			<p className='dot'>산술 연산자 : + - * ** / % ++ ++</p>
 			<p className='dot'>할당 연산자 : = += -+ *= /+ %= **= </p>
 			<p className='dot'>비교 연산자 : == === != !== &gt; < >= &lt;= ?</> </p>
@@ -172,7 +172,7 @@ export default function Script() {
 			<p className='dot'>비트 연산자 : &, |, ~, ^, &lt;&lt;, &gt;&gt;, &gt;&gt;&gt;</p>
 			<p className='dot'>삼항 연산자 : 조건 ? true = false</p>
 			<p className='dot'>유형 연산자 : typeof , instanceof </p>
-
+			<h3>JS 산술</h3>
         </div>
       </div>
     </ContentWrap>
