@@ -179,6 +179,13 @@ export default function Script() {
 			<p>숫자와 문자열을 추가하면 JavaScript는 숫자를 문자열로 처리합니다.</p>
 			<p>JavaScript는 왼쪽에서 오른쪽으로 표현식을 평가합니다. </p>
 			<p>Javascript 숫자는 항상 double(64비트 부동 소수점) 유형입니다 .</p>
+			그때 살껄
+			그때 사지 말껄
+			뭘 해도 후회는 하겠지?
+			3500
+			360
+			
+
         </div>
       </div>
     </ContentWrap>
