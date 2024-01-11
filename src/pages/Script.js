@@ -172,7 +172,13 @@ export default function Script() {
 			<p className='dot'>비트 연산자 : &, |, ~, ^, &lt;&lt;, &gt;&gt;, &gt;&gt;&gt;</p>
 			<p className='dot'>삼항 연산자 : 조건 ? true = false</p>
 			<p className='dot'>유형 연산자 : typeof , instanceof </p>
-			<h3>JS 산술</h3>
+			<h3>JS 데이터 유형</h3>
+			<p className='dot'>8가지 데이터 유형</p>
+			<p className='dot'>문자열, 숫자, Bigint, boolean, undefined, null, symbol, object </p>
+			<p>객체 데이터 유형 - 객체, 배열, date</p>
+			<p>숫자와 문자열을 추가하면 JavaScript는 숫자를 문자열로 처리합니다.</p>
+			<p>JavaScript는 왼쪽에서 오른쪽으로 표현식을 평가합니다. </p>
+			<p>Javascript 숫자는 항상 double(64비트 부동 소수점) 유형입니다 .</p>
         </div>
       </div>
     </ContentWrap>
